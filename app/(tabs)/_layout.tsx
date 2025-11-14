@@ -1,11 +1,13 @@
-import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
+import React from 'react';
 import { Pressable } from 'react-native';
 
-import Colors from '@/constants/Colors';
-import { useColorScheme } from '@/components/useColorScheme';
+import AddFriendButton from '@/components/AddFriendButton';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
+import { useColorScheme } from '@/components/useColorScheme';
+import Colors from '@/constants/Colors';
+import { FriendsProvider } from '@/contexts/FriendsContext';
 
 // You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
 function TabBarIcon(props: {
@@ -15,7 +17,7 @@ function TabBarIcon(props: {
   return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
 }
 
-export default function TabLayout() {
+function TabsContent() {
   const colorScheme = useColorScheme();
 
   return (
@@ -48,12 +50,21 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="friends"
         options={{
           title: 'Friends',
           tabBarIcon: ({ color }) => <TabBarIcon name="users" color={color} />,
+          headerRight: () => <AddFriendButton />,
         }}
       />
     </Tabs>
+  );
+}
+
+export default function TabLayout() {
+  return (
+    <FriendsProvider>
+      <TabsContent />
+    </FriendsProvider>
   );
 }
