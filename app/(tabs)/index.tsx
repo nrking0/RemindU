@@ -3,9 +3,10 @@ import { useColorScheme } from "@/components/useColorScheme";
 import Colors from "@/constants/Colors";
 import { useContacts } from "@/hooks/useContacts";
 import { useFocusEffect } from "@react-navigation/native";
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import { Calendar } from "react-native-calendars";
+import EventDetailsModal, { EventItem } from "../eventdetail";
 
 export default function TabOneScreen() {
   const now = new Date();
@@ -19,6 +20,9 @@ export default function TabOneScreen() {
   const colorScheme = useColorScheme();
   const colors = Colors[colorScheme ?? "light"];
   const { contacts, refreshContacts } = useContacts();
+
+  const [modalVisible, setModalVisible] = useState(false); // <--- NEW
+  const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null); // <--- NEW
 
   useFocusEffect(
     useCallback(() => {
@@ -215,6 +219,8 @@ export default function TabOneScreen() {
                 ]}
                 onPress={() => {
                   console.log("Event tapped:", event);
+                  setSelectedEvent(event);
+                  setModalVisible(true);
                 }}
               >
                 <View style={styles.eventContent}>
@@ -243,6 +249,11 @@ export default function TabOneScreen() {
             ))}
           </ScrollView>
         )}
+        <EventDetailsModal 
+              visible={modalVisible}
+              event={selectedEvent}
+              onClose={() => setModalVisible(false)}
+          />
       </View>
     </View>
   );
