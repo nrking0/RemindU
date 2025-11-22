@@ -1,0 +1,44 @@
+{"calendar":"Gregorian","date":"00-00","non_fixed":"first Monday of May","holiday":"Reconciliation Day (ACT)","location":"Australian Capital Territory, Australia","who":"Aborigines and Torres Strait Islanders (Indigenous Australians)"}
+{"calendar":"Māori (lunar)","date":"00-00","non_fixed":"Friday closest to Matariki rising (Tangaroa lunar period of Pipiri, late June/early July)","holiday":"Matariki (Māori New Year)","location":"New Zealand","who":"Māori people"}
+{"calendar":"Gregorian","date":"11-02","non_fixed":"","holiday":"Día de Muertos (Day of the Dead)","location":"Mexico","who":"Mexican people of indigenous heritage"}
+{"calendar":"Gregorian","date":"06-24","non_fixed":"","holiday":"Inti Raymi (Festival of the Sun)","location":"Cusco, Peru","who":"Quechua (Inca) communities"}
+{"calendar":"Ethiopian (Coptic)","date":"09-11","non_fixed":"","holiday":"Enkutatash (Ethiopian New Year)","location":"Ethiopia and Eritrea","who":"Ethiopian and Eritrean people"}
+{"calendar":"Ethiopian (Coptic)","date":"01-19","non_fixed":"","holiday":"Timket (Epiphany)","location":"Ethiopia","who":"Ethiopian Orthodox Christians"}
+{"calendar":"Tibetan (lunisolar)","date":"00-00","non_fixed":"first day of first Tibetan lunar month","holiday":"Losar (Tibetan New Year)","location":"Tibet, Bhutan, Nepal, etc.","who":"Tibetan Buddhists"}
+{"calendar":"Hindu (lunisolar)","date":"00-00","non_fixed":"Amavasya (new moon) of Kartik month (Oct/Nov)","holiday":"Diwali (Deepavali)","location":"India and worldwide","who":"Hindus"}
+{"calendar":"Vietnamese (lunisolar)","date":"00-00","non_fixed":"first day of first Vietnamese lunar month","holiday":"Tet (Vietnamese New Year)","location":"Vietnam","who":"Vietnamese people"}
+{"calendar":"Persian (solar)","date":"03-21","non_fixed":"","holiday":"Nowruz (Persian New Year)","location":"Iran and surrounding regions","who":"Persian and related peoples"}
+{"calendar":"Gregorian","date":"00-00","non_fixed":"second week of February","holiday":"Maple Ceremony","location":"Haudenosaunee (Iroquois) Confederacy, North America","who":"Haudenosaunee (Iroquois) nations"}
+{"calendar":"Gregorian","date":"00-00","non_fixed":"first week of April","holiday":"Thunder Dance","location":"Haudenosaunee (Iroquois) Confederacy, North America","who":"Haudenosaunee nations"}
+{"calendar":"Gregorian","date":"00-00","non_fixed":"middle of May","holiday":"Strawberry Ceremony","location":"Haudenosaunee (Iroquois) Confederacy, North America","who":"Haudenosaunee nations"}
+{"calendar":"Gregorian","date":"00-00","non_fixed":"first week of August","holiday":"String Bean Ceremony","location":"Haudenosaunee (Iroquois) Confederacy, North America","who":"Haudenosaunee nations"}
+{"calendar":"Gregorian","date":"00-00","non_fixed":"middle of August","holiday":"Corn Ceremony","location":"Haudenosaunee (Iroquois) Confederacy, North America","who":"Haudenosaunee nations"}
+{"calendar":"Gregorian","date":"00-00","non_fixed":"middle of October","holiday":"Harvest Ceremony","location":"Haudenosaunee (Iroquois) Confederacy, North America","who":"Haudenosaunee nations"}
+{"calendar":"Gregorian","date":"00-00","non_fixed":"late April/early May","holiday":"Homowo Festival","location":"Greater Accra Region, Ghana","who":"Ga people of Ghana"}
+{"calendar":"Gregorian","fixed_date":"00-00","non_fixed_date":"first Sunday of month 7","name":"NAIDOC Week","location":"Australia","celebrated_by":"Aboriginal and Torres Strait Islander peoples"}
+{"calendar":"Tibetan (lunisolar)","fixed_date":"00-00","non_fixed_date":"1st day of 1st month of Tibetan calendar","name":"Losar (Tibetan New Year)","location":"Tibet, Nepal, Bhutan, Mongolia","celebrated_by":"Tibetan and other Himalayan Buddhist communities"}
+{"calendar":"Hebrew","fixed_date":"00-00","non_fixed_date":"1st day of 7th month (Tishrei) of Hebrew calendar","name":"Rosh Hashanah","location":"Worldwide","celebrated_by":"Jewish people"}
+{"calendar":"Hebrew","fixed_date":"00-00","non_fixed_date":"25th day of 9th month (Kislev) of Hebrew calendar","name":"Hanukkah","location":"Worldwide","celebrated_by":"Jewish people"}
+{"calendar":"Chinese (lunisolar)","fixed_date":"00-00","non_fixed_date":"1st day of 1st month of Chinese calendar","name":"Chinese New Year","location":"China and worldwide (Chinese communities)","celebrated_by":"Han Chinese and other Sinophone communities"}
+{"calendar":"Chinese (lunisolar)","fixed_date":"00-00","non_fixed_date":"15th day of 8th month of Chinese calendar","name":"Mid-Autumn Festival","location":"China and East/Southeast Asia","celebrated_by":"Han Chinese and related East Asian cultures"}
+{"calendar":"Gregorian","fixed_date":"03-17","non_fixed_date":"", "name":"St. Patrick's Day","location":"Ireland and Irish diaspora","celebrated_by":"Irish people (and people of Irish descent)"}
+{"calendar":"Gregorian","fixed_date":"11-30","non_fixed_date":"","name":"St. Andrew's Day","location":"Scotland","celebrated_by":"Scottish people"}
+{"calendar":"Gregorian","fixed_date":"02-06","non_fixed_date":"","name":"Sámi National Day","location":"Norway, Sweden, Finland, Russia (Sápmi)","celebrated_by":"Sámi people"}
+{"calendar":"Gregorian","fixed_date":"11-02","non_fixed_date":"","name":"Day of the Dead","location":"Mexico (and parts of Latin America)","celebrated_by":"Mexican people (with Aztec/Mesoamerican roots)"}
+{"calendar":"Islamic","fixed_date":"00-00","non_fixed_date":"3rd month of Islamic calendar (Rabīʿ al-awwal)","name":"Damba Festival","location":"Northern Ghana","celebrated_by":"Dagomba, Gonja and other peoples of Northern Ghana"}
+{"calendar":"Gregorian","fixed_date":"06-19","non_fixed_date":"","name":"Juneteenth","location":"United States","celebrated_by":"African American community"}
+{"calendar":"Gregorian","fixed_date":"06-21","non_fixed_date":"","name":"National Indigenous Peoples Day","location":"Canada","celebrated_by":"First Nations, Inuit, and Métis peoples of Canada"}
+{"calendar":"Gregorian","fixed_date":"06-24","non_fixed_date":"","name":"Inti Raymi (Festival of the Sun)","location":"Peru (Andes)","celebrated_by":"Quechua/Incan indigenous peoples of the Andes"}
+{"calendar":"Tamil (solar)","fixed_date":"00-00","non_fixed_date":"1st day of 10th month (Thai) of Tamil calendar","name":"Thai Pongal","location":"Tamil Nadu (India), Sri Lanka","celebrated_by":"Tamil people"}
+{"calendar":"Gregorian","fixed_date":"00-00","non_fixed_date":"second Monday of month 10","name":"Indigenous Peoples' Day","location":"United States","celebrated_by":"Native American peoples"}
+{"calendar":"Gregorian","fixed_date":"03-03","non_fixed_date":"","name":"Hinamatsuri (Girls' Day)","location":"Japan","celebrated_by":"Japanese (families with young girls)"}
+{"calendar": "Māori", "fixed_date": "00-00", "non_fixed_date": "Friday nearest to June 24 (varies annually)", "name": "Matariki (Māori New Year)", "location": "New Zealand", "celebrated_by": "Māori people"}
+{"calendar": "Gregorian", "fixed_date": "10-08", "non_fixed_date": "", "name": "Mehregan (Mehrgān)", "location": "Iran and neighboring Persian communities", "celebrated_by": "Zoroastrians and Iranian cultural communities"}
+{"calendar": "Gregorian", "fixed_date": "00-00", "non_fixed_date": "Last Friday before December 21", "name": "Feast of Ezid (Cejna Ezid)", "location": "Iraq (primarily Yazidi regions)", "celebrated_by": "Yazidi religious community"}
+{"calendar": "Gregorian", "fixed_date": "00-00", "non_fixed_date": "April 25–28", "name": "Ziyara (Pilgrimage to Nabi Shuayb)", "location": "Israel (Jethro’s Tomb at Nabi Shuayb)", "celebrated_by": "Druze community"}
+{"calendar": "Gregorian", "fixed_date": "00-00", "non_fixed_date": "Late September or early October", "name": "Irreechaa", "location": "Ethiopia (Oromia Region)", "celebrated_by": "Oromo people"}
+{"calendar": "Other (Hindu lunar)", "fixed_date": "00-00", "non_fixed_date": "5th day of the waxing moon of Bhadrapada (Aug–Sept)", "name": "Nuakhai", "location": "Western Odisha, India", "celebrated_by": "Farmers in the Oriya (Odisha) community"}
+{"calendar": "Gregorian", "fixed_date": "00-00", "non_fixed_date": "Early August (end of rainy season)", "name": "New Yam Festival (Iri ji)", "location": "Nigeria (Igboland)", "celebrated_by": "Igbo people"}
+{"calendar": "Gregorian", "fixed_date": "01-10", "non_fixed_date": "", "name": "Fête du Vodoun (Vodun Festival)", "location": "Benin", "celebrated_by": "Vodun practitioners in Benin"}
+{"calendar": "Other (Yoruba)", "fixed_date": "00-00", "non_fixed_date": "Varies regionally (annual masquerade festival)", "name": "Odun Egungun (Yoruba Ancestors Festival)", "location": "Nigeria (Yorubaland)", "celebrated_by": "Yoruba people"}
+{"calendar": "Gregorian", "fixed_date": "10-31", "non_fixed_date": "", "name": "Día de los Muertos (Day of the Dead)", "location": "Mexico", "celebrated_by": "Mexican communities"}
