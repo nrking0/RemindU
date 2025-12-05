@@ -2,9 +2,11 @@ import { Text, View } from "@/components/Themed";
 import { useColorScheme } from "@/components/useColorScheme";
 import Colors from "@/constants/Colors";
 import { Contact } from "@/hooks/useContacts";
+import * as ImagePicker from "expo-image-picker";
 import React, { useState } from "react";
 import {
   Alert,
+  Image,
   KeyboardAvoidingView,
   Modal,
   Platform,
@@ -13,6 +15,7 @@ import {
   TextInput,
   TouchableOpacity
 } from "react-native";
+import HolidaySelector from "./HolidaySelector";
 
 interface AddFriendModalProps {
   visible: boolean;
@@ -29,11 +32,13 @@ export default function AddFriendModal({
   const [lastName, setLastName] = useState("");
   const [birthday, setBirthday] = useState("");
   const [birthdayDate, setBirthdayDate] = useState<Date>(new Date());
+  const [photoUri, setPhotoUri] = useState<string | null>(null);
   const [holidays, setHolidays] = useState<{ name: string; date: string }[]>(
     []
   );
   const [newHolidayName, setNewHolidayName] = useState("");
   const [newHolidayDate, setNewHolidayDate] = useState("");
+  const [isHolidaySelectorVisible, setIsHolidaySelectorVisible] = useState(false);
 
   const colorScheme = useColorScheme();
   const colors = Colors[colorScheme ?? "light"];
@@ -46,6 +51,16 @@ export default function AddFriendModal({
       ]);
       setNewHolidayName("");
       setNewHolidayDate("");
+    }
+  };
+
+  const addPredefinedHoliday = (holiday: { name: string; date: string }) => {
+    const alreadyExists = holidays.some((h) => h.name === holiday.name);
+    
+    if (alreadyExists) {
+      setHolidays(holidays.filter((h) => h.name !== holiday.name));
+    } else {
+      setHolidays([...holidays, holiday]);
     }
   };
 
@@ -97,6 +112,26 @@ export default function AddFriendModal({
     );
   };
 
+  const pickImage = async () => {
+    const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    
+    if (permissionResult.granted === false) {
+      Alert.alert("Permission Required", "Permission to access camera roll is required!");
+      return;
+    }
+
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ["images"],
+      allowsEditing: true,
+      aspect: [1, 1],
+      quality: 0.5,
+    });
+
+    if (!result.canceled) {
+      setPhotoUri(result.assets[0].uri);
+    }
+  };
+
   const handleSubmit = () => {
     if (!firstName.trim() || !lastName.trim()) {
       Alert.alert("Error", "Please enter both first and last name");
@@ -138,7 +173,8 @@ export default function AddFriendModal({
       lastName: lastName.trim(),
       birthday: finalBirthdayDate,
       holidays: holidays,
-      id: Math.random().toString(36)
+      id: Math.random().toString(36),
+      photoUri: photoUri || undefined
     };
 
     onAddContact(newContact);
@@ -151,6 +187,7 @@ export default function AddFriendModal({
     setLastName("");
     setBirthday("");
     setBirthdayDate(new Date());
+    setPhotoUri(null);
     setHolidays([]);
     setNewHolidayName("");
     setNewHolidayDate("");
@@ -206,6 +243,28 @@ export default function AddFriendModal({
             showsVerticalScrollIndicator={false}
             contentContainerStyle={{ paddingBottom: 20 }}
           >
+            <View style={styles.photoSection}>
+              <TouchableOpacity 
+                style={[
+                  styles.photoContainer, 
+                  { 
+                    backgroundColor: "transparent" 
+                  }
+                ]}
+                onPress={pickImage}
+              >
+                {photoUri ? (
+                  <Image source={{ uri: photoUri }} style={styles.photo} />
+                ) : (
+                  <View style={styles.photoPlaceholder}>
+                    <Text style={[styles.photoText, { color: colors.tint }]}>
+                      Add Photo
+                    </Text>
+                  </View>
+                )}
+              </TouchableOpacity>
+            </View>
+
             <View style={styles.section}>
               <Text style={[styles.label, { color: colors.text }]}>
                 First Name
@@ -250,34 +309,56 @@ export default function AddFriendModal({
             </View>
 
             <View style={styles.section}>
-              <Text style={[styles.label, { color: colors.text }]}>
-                Holidays
-              </Text>
+              <View style={styles.sectionHeader}>
+                <Text style={[styles.label, { color: colors.text }]}>
+                  Holidays
+                </Text>
+                <TouchableOpacity
+                  style={[styles.selectButton, { backgroundColor: colors.tint }]}
+                  onPress={() => setIsHolidaySelectorVisible(true)}
+                >
+                  <Text style={styles.selectButtonText}>
+                    Select from List
+                  </Text>
+                </TouchableOpacity>
+              </View>
 
               {holidays.map((holiday, index) => (
-                <View key={index} style={styles.holidayItem}>
+                <View 
+                  key={index} 
+                  style={[
+                  styles.holidayItem,
+                  index === holidays.length - 1 && { borderBottomWidth: 0 }
+                  ]}
+                >
                   <View style={styles.holidayInfo}>
-                    <Text style={[styles.holidayName, { color: colors.text }]}>
-                      {holiday.name}
-                    </Text>
-                    <Text
-                      style={[
-                        styles.holidayDate,
-                        { color: colors.text + "80" }
-                      ]}
-                    >
-                      {holiday.date}
-                    </Text>
+                  <Text style={[styles.holidayName, { color: colors.text }]}>
+                    {holiday.name}
+                  </Text>
+                  <Text
+                    style={[
+                    styles.holidayDate,
+                    { color: colors.text + "80" }
+                    ]}
+                  >
+                    {holiday.date}
+                  </Text>
                   </View>
                   <TouchableOpacity onPress={() => removeHoliday(index)}>
-                    <Text style={[styles.removeButton, { color: "red" }]}>
-                      Remove
-                    </Text>
+                  <Text style={[styles.removeButton, { color: "red" }]}>
+                    Remove
+                  </Text>
                   </TouchableOpacity>
                 </View>
               ))}
 
+              <View style={[styles.divider, { borderBottomColor: colors.text + "20" }]} />
+
+
               <View style={styles.addHolidaySection}>
+                <Text style={[styles.sectionSubtitle, { color: colors.text + "80" }]}>
+                  Or add a custom holiday:
+                </Text>
                 <TextInput
                   style={[inputStyle, styles.holidayInput]}
                   value={newHolidayName}
@@ -307,6 +388,13 @@ export default function AddFriendModal({
           </ScrollView>
         </View>
       </KeyboardAvoidingView>
+
+      <HolidaySelector
+        visible={isHolidaySelectorVisible}
+        onClose={() => setIsHolidaySelectorVisible(false)}
+        onSelectHoliday={addPredefinedHoliday}
+        selectedHolidays={holidays}
+      />
     </Modal>
   );
 }
@@ -339,13 +427,53 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20
   },
+  photoSection: {
+    alignItems: "center",
+    marginBottom: 24
+  },
+  photoContainer: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    borderWidth: 2,
+    overflow: "hidden",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  photo: {
+    width: "100%",
+    height: "100%"
+  },
+  photoPlaceholder: {
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  photoText: {
+    fontSize: 14,
+    fontWeight: "500"
+  },
   section: {
     marginBottom: 20
   },
+  sectionHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 8
+  },
   label: {
     fontSize: 16,
-    fontWeight: "600",
-    marginBottom: 8
+    fontWeight: "600"
+  },
+  selectButton: {
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 6
+  },
+  selectButtonText: {
+    color: "white",
+    fontSize: 14,
+    fontWeight: "600"
   },
   input: {
     borderWidth: 1,
@@ -379,6 +507,15 @@ const styles = StyleSheet.create({
   },
   addHolidaySection: {
     marginTop: 15
+  },
+  sectionSubtitle: {
+    fontSize: 14,
+    marginBottom: 10,
+    fontStyle: "italic"
+  },
+  divider: {
+    borderBottomWidth: 1,
+    marginVertical: 15
   },
   holidayInput: {
     marginBottom: 10

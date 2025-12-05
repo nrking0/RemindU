@@ -5,12 +5,14 @@ type holiday = {
     name: string;
     date: string;
 }
+
 export type Contact = {
     id: string;
     firstName: string;
     lastName: string;
     birthday: Date; 
     holidays: holiday[];
+    photoUri?: string;
 }
 
 export const useContacts = () => {
@@ -40,7 +42,7 @@ export const useContacts = () => {
     
     useEffect(() => {
         refreshContacts();
-    }, [contacts]);
+    }, []);
 
     const addContact = async (newContact: Contact) => {
         try {

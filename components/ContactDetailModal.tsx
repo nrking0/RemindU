@@ -4,11 +4,12 @@ import Colors from "@/constants/Colors";
 import { Contact } from "@/hooks/useContacts";
 import React from "react";
 import {
-  Modal,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity
+    Image,
+    Modal,
+    Platform,
+    ScrollView,
+    StyleSheet,
+    TouchableOpacity
 } from "react-native";
 
 interface ContactDetailModalProps {
@@ -106,12 +107,16 @@ export default function ContactDetailModal({
 
         <ScrollView style={styles.content}>
           <View style={styles.profileSection}>
-            <View style={[styles.avatar, { backgroundColor: colors.tint }]}>
-              <Text style={styles.avatarText}>
-                {contact.firstName[0]}
-                {contact.lastName[0]}
-              </Text>
-            </View>
+            {contact.photoUri ? (
+              <Image source={{ uri: contact.photoUri }} style={styles.photoAvatar} />
+            ) : (
+              <View style={[styles.avatar, { backgroundColor: colors.tint }]}>
+                <Text style={styles.avatarText}>
+                  {contact.firstName[0]}
+                  {contact.lastName[0]}
+                </Text>
+              </View>
+            )}
             <Text style={[styles.name, { color: colors.text }]}>
               {contact.firstName} {contact.lastName}
             </Text>
@@ -140,10 +145,16 @@ export default function ContactDetailModal({
             {contact.holidays && contact.holidays.length > 0 && (
               <View style={styles.infoCard}>
                 <Text style={[styles.sectionTitle, { color: colors.text }]}>
-                  Custom Holidays ({contact.holidays.length})
+                  Holidays ({contact.holidays.length})
                 </Text>
                 {contact.holidays.map((holiday, index) => (
-                  <View key={index} style={styles.holidayRow}>
+                  <View 
+                    key={index} 
+                    style={[
+                      styles.holidayRow,
+                      index === contact.holidays.length - 1 && { borderBottomWidth: 0 }
+                    ]}
+                  >
                     <Text style={[styles.holidayName, { color: colors.text }]}>
                       {holiday.name}
                     </Text>
@@ -213,6 +224,12 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: 15
+  },
+  photoAvatar: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
     marginBottom: 15
   },
   avatarText: {

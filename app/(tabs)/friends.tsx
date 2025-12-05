@@ -8,6 +8,7 @@ import { Contact, useContacts } from "@/hooks/useContacts";
 import React, { useState } from "react";
 import {
   FlatList,
+  Image,
   RefreshControl,
   StyleSheet,
   TouchableOpacity
@@ -78,22 +79,34 @@ export default function TabTwoScreen() {
 
     return (
       <TouchableOpacity
-        style={[styles.contactItem, { borderBottomColor: colors.text + "20" }]}
+        style={[
+          styles.contactItem,
+          {
+            borderBottomColor:
+              item === contacts[contacts.length - 1]
+                ? "transparent"
+                : colors.tabIconDefault
+          }
+        ]}
         onPress={() => handleContactPress(item)}
       >
         <View style={styles.contactContent}>
-          <View style={[styles.avatar, { backgroundColor: colors.tint }]}>
-            <Text style={styles.avatarText}>
-              {item.firstName[0]}
-              {item.lastName[0]}
-            </Text>
-          </View>
+          {item.photoUri ? (
+            <Image source={{ uri: item.photoUri }} style={styles.photoAvatar} />
+          ) : (
+            <View style={[styles.avatar, { backgroundColor: colors.tint }]}>
+              <Text style={styles.avatarText}>
+                {item.firstName[0]}
+                {item.lastName[0]}
+              </Text>
+            </View>
+          )}
 
           <View style={styles.contactInfo}>
             <Text style={[styles.contactName, { color: colors.text }]}>
               {item.firstName} {item.lastName}
             </Text>
-            <Text style={[styles.birthdayText, { color: colors.text + "80" }]}>
+            <Text style={[styles.birthdayText, { color: colors.text }]}>
               Birthday: {formatBirthday(item.birthday)}
               {item.holidays.length > 0 &&
                 ` • ${item.holidays.length} holidays`}
@@ -107,16 +120,14 @@ export default function TabTwoScreen() {
               </Text>
             ) : daysUntil === 1 ? (
               <Text style={[styles.tomorrowBirthday, { color: "teal" }]}>
-                🎂 Tomorrow
+                Tomorrow
               </Text>
             ) : daysUntil <= 7 ? (
               <Text style={[styles.soonBirthday, { color: colors.tint }]}>
-                🎈 {daysUntil} days
+                {daysUntil} days
               </Text>
             ) : (
-              <Text
-                style={[styles.futureBirthday, { color: colors.text + "60" }]}
-              >
+              <Text style={[styles.futureBirthday, { color: colors.text }]}>
                 {daysUntil} days
               </Text>
             )}
@@ -128,10 +139,10 @@ export default function TabTwoScreen() {
 
   const renderEmptyState = () => (
     <View style={styles.emptyContainer}>
-      <Text style={[styles.emptyText, { color: colors.text + "60" }]}>
+      <Text style={[styles.emptyText, { color: colors.text }]}>
         No friends added yet
       </Text>
-      <Text style={[styles.emptySubtext, { color: colors.text + "40" }]}>
+      <Text style={[styles.emptySubtext, { color: colors.text }]}>
         Tap the + button to add your first friend
       </Text>
     </View>
@@ -199,6 +210,12 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
+    marginRight: 15
+  },
+  photoAvatar: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
     marginRight: 15
   },
   avatarText: {
