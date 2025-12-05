@@ -1,5 +1,170 @@
 [
   {
+    "calendar": "Ethiopian (Coptic)",
+    "date": "01-19",
+    "non_fixed": "",
+    "holiday": "Timket (Epiphany)",
+    "location": "Ethiopia",
+    "who": "Ethiopian Orthodox Christians",
+    "summary": "Timket is the celebration of the Epiphany, commemorating the baptism of Jesus Christ in the Jordan River. It is the most important festival of the Ethiopian Orthodox Tewahedo Church, celebrated with a highly colorful and vibrant three-day procession. The central ritual involves the Tabots (replicas of the Ark of the Covenant, consecrated to a particular church) being carried to a body of water, symbolizing the physical manifestation of God to humankind.",
+    "greeting": "May the joyous and spiritual light of Timket bring you blessings, community, and happiness this year. Happy Timket to you, [contact name]!",
+    "forlan": "Melkam Timket. (Amharic for Happy Timket.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "01-10",
+    "non_fixed": "",
+    "holiday": "Fête du Vodoun (Vodun Festival)",
+    "location": "Benin",
+    "who": "Vodun practitioners in Benin",
+    "summary": "Fête du Vodoun is a national holiday in Benin that celebrates the West African Vodun (Voodoo) religion and its cultural significance. It is a day for followers to honor their deities and ancestors through ceremonies, rituals, traditional drumming, and dancing. The festival is a vibrant public demonstration of a major regional religious tradition that connects the spiritual world with the living.",
+    "greeting": "Wishing you peace, connection, and spiritual strength on the Fête du Vodoun. May your ancestors and deities bless your path, [contact name]!",
+    "forlan": "Ayigoun. (Fon for Cheers/Health.)"
+  },
+  {
+    "calendar": "Tamil (solar)",
+    "date": "01-15",
+    "non_fixed": "1st day of 10th month (Thai) of Tamil calendar",
+    "holiday": "Thai Pongal",
+    "location": "Tamil Nadu (India), Sri Lanka",
+    "who": "Tamil people",
+    "summary": "Thai Pongal is a harvest festival, a four-day celebration of thanksgiving to the Sun God (Surya) for a bountiful harvest. The central ritual involves boiling the first rice of the harvest with milk, jaggery (raw sugar), and spices in a new pot until it bubbles over (**pongal**), symbolizing prosperity. It is a time for family gatherings, cleaning homes, and celebrating the renewal of life and prosperity.",
+    "greeting": "Wishing you a life overflowing with sweetness, prosperity, and the blessing of a good harvest. **Thai Pirandhal Vazhi Pirakkum** (The commencement of Thai month brings prosperity). Happy Pongal, [contact name]!",
+    "forlan": "Pongal Nalvazhthukkal. (Tamil for Happy Pongal.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "02-06",
+    "non_fixed": "",
+    "holiday": "Sámi National Day",
+    "location": "Norway, Sweden, Finland, Russia (Sápmi)",
+    "who": "Sámi people",
+    "summary": "The Sámi National Day commemorates the first Sámi congress in 1917, a meeting that gathered Sámi from Norway and Sweden to discuss common issues. It is a day to celebrate the culture, language, and indigenous identity of the Sámi people—Europe's only officially recognized Indigenous people. Celebrations involve raising the Sámi flag, wearing the traditional **gákti** costume, and performing the **joik** (traditional singing).",
+    "greeting": "Celebrating the resilience and rich culture of the Sámi people on this important day! May your community thrive. Happy Sámi National Day, [contact name]!",
+    "forlan": "Buori Sámi álbmotbeivi. (Northern Sámi for Happy Sámi National Day.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "02-12",
+    "non_fixed": "late February, following the sap flow",
+    "holiday": "Maple Ceremony",
+    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
+    "who": "Haudenosaunee (Iroquois) nations",
+    "summary": "The Maple Ceremony is one of the Haudenosaunee's annual cycles of thanksgiving, held to acknowledge and thank the Creator for the maple sap (sugar water) which provides sustenance at the end of winter. It celebrates the renewal of the forest and the beginning of the agricultural cycle, reaffirming the deep, reciprocal relationship between the people and the natural world.",
+    "greeting": "On this day of thanks for the Maple, may your life be filled with sweetness and renewal. Wishing you a blessed time of gathering and community, [contact name]!",
+    "forlan": "Niawen. (Mohawk for Thank you/Gratitude.)"
+  },
+  {
+    "calendar": "Chinese (lunisolar)",
+    "date": "02-17",
+    "non_fixed": "1st day of 1st month of Chinese calendar",
+    "holiday": "Chinese New Year (Lunar New Year)",
+    "location": "China and worldwide (Chinese communities)",
+    "who": "Han Chinese and other Sinophone communities",
+    "summary": "Chinese New Year, also known as the Spring Festival, marks the beginning of the new year on the traditional Chinese lunisolar calendar. It is the most important holiday for family reunion, marked by thorough cleaning to sweep away bad luck, firecrackers to ward off evil spirits, and the exchange of red envelopes (**hóngbāo**) containing money. The cultural significance is rooted in honoring ancestors and deities, celebrating the shift from winter to spring, and bringing good fortune for the year ahead.",
+    "greeting": "May your year be filled with prosperity, good health, and success! **Gong Xi Fa Cai** (Wishing you fortune and prosperity) and Happy Lunar New Year, [contact name]!",
+    "forlan": "Xīnnián kuàilè. (Mandarin Chinese for Happy New Year.)"
+  },
+  {
+    "calendar": "Vietnamese (lunisolar)",
+    "date": "02-17",
+    "non_fixed": "first day of first Vietnamese lunar month",
+    "holiday": "Tet (Vietnamese New Year)",
+    "location": "Vietnam",
+    "who": "Vietnamese people",
+    "summary": "Tết is the most important celebration in Vietnamese culture, marking the arrival of spring and the beginning of the new lunar year. It is a time for family reunion, paying respect to ancestors, and traditional rituals. People clean their homes to sweep away bad luck, decorate with peach and apricot blossoms, and prepare special foods like Bánh Chưng (a savory sticky rice cake). It is a vital holiday for preserving cultural identity and honoring family lineage.",
+    "greeting": "I wish you a New Year filled with health, happiness, and success! **Chúc Mừng Năm Mới** (Happy New Year) and Happy Tết, [contact name]!",
+    "forlan": "Cung Chúc Tân Xuân, An Khang Thịnh Vượng. (Vietnamese for Best wishes for the new spring, Security, good health, and prosperity.)"
+  },
+  {
+    "calendar": "Tibetan (lunisolar)",
+    "date": "02-18",
+    "non_fixed": "1st day of 1st month of Tibetan calendar",
+    "holiday": "Losar (Tibetan New Year)",
+    "location": "Tibet, Nepal, Bhutan, Mongolia",
+    "who": "Tibetan and other Himalayan Buddhist communities",
+    "summary": "Losar is the most important festival in the Tibetan calendar, marking the New Year. The celebrations, which can last up to 15 days, involve cleaning homes, decorating with religious symbols, making special offerings, and participating in rituals to drive away evil spirits of the past year and welcome prosperity for the new one. It is a deeply spiritual time to honor ancestors and religious figures, reinforcing the community's Buddhist values and cultural bonds.",
+    "greeting": "As you celebrate the New Year, may your life be filled with prosperity, peace, and good health. **Tashi Delek** (Good luck/blessings) and Happy Losar, [contact name]!",
+    "forlan": "Losar Tashi Delek! (Tibetan for Happy New Year and Good Luck!)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "03-03",
+    "non_fixed": "",
+    "holiday": "Hinamatsuri (Girls' Day)",
+    "location": "Japan",
+    "who": "Japanese (families with young girls)",
+    "summary": "Hinamatsuri, or Girls' Day (Doll Festival), is a day dedicated to praying for the health, happiness, and prosperity of young girls. Families display elaborate sets of traditional ornamental **Hina dolls** (representing the Emperor, Empress, attendants, and musicians of the Heian period) dressed in ancient court attire. Offerings of rice cakes (**hishimochi**) and sweet white sake (**shirozake**) are made to the dolls.",
+    "greeting": "Wishing you and your family joy and good fortune on this special day. May your daughter's health and happiness bloom like the peach blossoms. Happy Hinamatsuri, [contact name]!",
+    "forlan": "Hinamatsuri Omedetō. (Japanese for Happy Hinamatsuri.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "03-17",
+    "non_fixed": "",
+    "holiday": "St. Patrick's Day",
+    "location": "Ireland and Irish diaspora",
+    "who": "Irish people (and people of Irish descent)",
+    "summary": "St. Patrick's Day is a cultural and religious celebration held on the traditional death date of St. Patrick (c. 385–461), the foremost patron saint of Ireland. It commemorates the arrival of Christianity in Ireland. It has evolved into a global celebration of Irish culture, typically marked by public parades, festivals, the wearing of green attire, and the use of the **shamrock** (which St. Patrick reputedly used to explain the Holy Trinity).",
+    "greeting": "May your day be touched with a bit of Irish luck and your glass never be empty! Wishing you a happy and green St. Patrick's Day, [contact name]!",
+    "forlan": "Lá Fhéile Pádraig sona duit. (Irish Gaelic for Happy St. Patrick's Day to you.)"
+  },
+  {
+    "calendar": "Persian (solar)",
+    "date": "03-21",
+    "non_fixed": "",
+    "holiday": "Nowruz (Persian New Year)",
+    "location": "Iran and surrounding regions",
+    "who": "Persian and related peoples",
+    "summary": "Nowruz marks the New Year and the first day of spring, coinciding with the vernal equinox. With roots in Zoroastrianism, it is a celebration of renewal and rebirth. Traditional customs include 'house shaking' (thorough spring cleaning), leaping over bonfires, and setting the **Haft-Sīn** table—seven items starting with the Persian letter S that symbolize renewal, prosperity, and health. It is a unifying secular holiday that brings families together to welcome the new season.",
+    "greeting": "Wishing you a year filled with joy, prosperity, and the vibrant spirit of spring! **Nowruz Mobarak** (Happy New Year) and a warm Nowruz greeting to you, [contact name]!",
+    "forlan": "Eid-e Shoma Mobarak. (Persian/Farsi for Blessed Holiday to you.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "04-05",
+    "non_fixed": "when the first thunder is heard (late March/early April)",
+    "holiday": "Thunder Dance",
+    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
+    "who": "Haudenosaunee nations",
+    "summary": "The Thunder Dance (or Thunder Ceremony) is held when the first distant thunder of spring is heard. The ceremony is a thanksgiving ritual to the Thunderers (the Sky Dwellers), who bring the rains necessary to water the crops and awaken the earth. It marks the transition from winter to the active growing season, imploring the forces of nature to continue nurturing the land.",
+    "greeting": "Sending you wishes for growth, renewal, and the life-giving energy of the spring rains. May the Thunderers watch over your season ahead, [contact name]!",
+    "forlan": "Niawen. (Mohawk for Thank you/Gratitude.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "04-25",
+    "non_fixed": "April 25–28",
+    "holiday": "Ziyara (Pilgrimage to Nabi Shuayb)",
+    "location": "Israel (Jethro’s Tomb at Nabi Shuayb)",
+    "who": "Druze community",
+    "summary": "The Ziyara is an annual four-day pilgrimage to the tomb of Nabi Shuayb (identified as the Prophet Jethro, Moses' father-in-law) near Tiberias. It is the most important holiday for the Druze religious community, a time for religious observance, social bonding, and affirming their faith's traditions. The pilgrimage involves religious rites, communal feasting, and cultural celebration.",
+    "greeting": "May your pilgrimage be blessed and your spirit renewed. Wishing you and your community a peaceful Ziyara, [contact name]!",
+    "forlan": "Ziyara Mabrouka. (Arabic for Blessed Pilgrimage.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "05-02",
+    "non_fixed": "late April/early May",
+    "holiday": "Homowo Festival",
+    "location": "Greater Accra Region, Ghana",
+    "who": "Ga people of Ghana",
+    "summary": "Homowo, meaning 'Hooting at Hunger,' is an annual harvest festival celebrated by the Ga people. It originated as a commemoration of the time when the Ga people faced a severe famine but successfully managed to overcome it through hard work. The festival involves significant rituals like the sowing of maize, a ban on drumming, and culminating in a feasting and noise-making celebration where a special food called **kpokpoi** is sprinkled to drive out hunger and evil spirits.",
+    "greeting": "May your year be filled with abundance and may you always celebrate the triumph over hardship. Wishing you a joyful Homowo Festival, [contact name]!",
+    "forlan": "Afi oo Afi. (Ga for May you have many returns of the festival/year.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "05-20",
+    "non_fixed": "when the strawberries ripen (middle to late May)",
+    "holiday": "Strawberry Ceremony",
+    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
+    "who": "Haudenosaunee nations",
+    "summary": "The Strawberry Ceremony gives thanks for the first significant natural fruit of the year—the strawberry, often called the 'leader of the fruits' or the 'heart berry.' This ceremony is a celebration of life, good health, and the abundance of Mother Earth. It is a time for communal celebration, traditional social dances, and the sharing of strawberry juice, signifying purity and heart-centered living.",
+    "greeting": "May the sweetness of the Strawberry Ceremony fill your heart with joy and health. Wishing you a beautiful season of abundance, [contact name]!",
+    "forlan": "Niawen. (Mohawk for Thank you/Gratitude.)"
+  },
+  {
     "calendar": "Gregorian",
     "date": "06-01",
     "non_fixed": "first Monday of May",
@@ -10,274 +175,15 @@
     "greeting": "On Reconciliation Day, I want to acknowledge the rich cultural contributions of Indigenous Australians. May we all continue to work toward a better, more united future. Wishing you well, [contact name]!"
   },
   {
-    "calendar": "Māori (lunar)",
-    "date": "07-10",
-    "non_fixed": "Friday closest to Matariki rising (Tangaroa lunar period of Pipiri, late June/early July)",
-    "holiday": "Matariki (Māori New Year)",
-    "location": "New Zealand",
-    "who": "Māori people",
-    "summary": "Matariki is the Māori name for the cluster of stars known as the Pleiades. Its first rising, usually in late June or early July, signals the start of the Māori New Year. It is a time for reflection on the past year, planning for the year ahead, celebrating the harvest, honoring the dead, and spending time with whānau (family). Its cultural significance lies in marking the cycle of life, the natural world, and a reconnection to ancestral traditions.",
-    "greeting": "May the Matariki star cluster shine brightly on you and your loved ones! Wishing you a period of reflection, renewal, and a prosperous Māori New Year. **Kia Ora** and Happy Matariki, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "11-02",
-    "non_fixed": "",
-    "holiday": "Día de Muertos (Day of the Dead)",
-    "location": "Mexico",
-    "who": "Mexican people of indigenous heritage",
-    "summary": "This multi-day holiday focuses on gatherings of family and friends to pray for and remember friends and family members who have died, and help support their spiritual journey. It's a vibrant, joyous, and significant cultural tradition, deeply rooted in indigenous customs, where death is embraced as a natural part of the human experience. Families build private altars (ofrendas) decorated with marigolds, the favorite foods and beverages of the departed, and photos.",
-    "greeting": "May the beautiful traditions of Día de Muertos bring you comfort, connection, and fond memories of your loved ones. Wishing you a peaceful Day of the Dead, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "06-24",
-    "non_fixed": "",
-    "holiday": "Inti Raymi (Festival of the Sun)",
-    "location": "Cusco, Peru",
-    "who": "Quechua (Inca) communities",
-    "summary": "Inti Raymi is a traditional Inca religious ceremony that honors the Sun God, Inti. Historically, it was the most important of the four Incan festivals, celebrating the winter solstice and marking the beginning of the planting season in the Andes. Today, it is a spectacular and culturally significant theatrical representation of the ceremony, celebrating Quechua heritage and reaffirming the cultural identity of the Andean people.",
-    "greeting": "On this day of Inti Raymi, I send you wishes for warmth, strength, and abundance in the coming year, just as the Sun God provides for the land. Happy Festival of the Sun, [contact name]!"
-  },
-  {
-    "calendar": "Ethiopian (Coptic)",
-    "date": "09-11",
-    "non_fixed": "",
-    "holiday": "Enkutatash (Ethiopian New Year)",
-    "location": "Ethiopia and Eritrea",
-    "who": "Ethiopian and Eritrean people",
-    "summary": "Enkutatash marks the New Year in the Ethiopian calendar. The date coincides with the end of the long rainy season and the blooming of the yellow Meskel daisies (Ades Ababa), symbolizing renewal and hope. It is a time for family gatherings, feasting, and the giving of small gifts and greetings, celebrating the transition to the new year and the arrival of the spring season.",
-    "greeting": "Wishing you and your family a beautiful New Year filled with the promise of spring! Happy Enkutatash, [contact name]!"
-  },
-  {
-    "calendar": "Ethiopian (Coptic)",
-    "date": "01-19",
-    "non_fixed": "",
-    "holiday": "Timket (Epiphany)",
-    "location": "Ethiopia",
-    "who": "Ethiopian Orthodox Christians",
-    "summary": "Timket is the celebration of the Epiphany, commemorating the baptism of Jesus Christ in the Jordan River. It is the most important festival of the Ethiopian Orthodox Tewahedo Church, celebrated with a highly colorful and vibrant three-day procession. The central ritual involves the Tabots (replicas of the Ark of the Covenant, consecrated to a particular church) being carried to a body of water, symbolizing the physical manifestation of God to humankind.",
-    "greeting": "May the joyous and spiritual light of Timket bring you blessings, community, and happiness this year. Happy Timket to you, [contact name]!"
-  },
-  {
-    "calendar": "Tibetan (lunisolar)",
-    "date": "02-18",
-    "non_fixed": "first day of first Tibetan lunar month",
-    "holiday": "Losar (Tibetan New Year)",
-    "location": "Tibet, Bhutan, Nepal, etc.",
-    "who": "Tibetan Buddhists",
-    "summary": "Losar is the most important festival in the Tibetan calendar, marking the New Year. The celebrations, which can last up to 15 days, involve cleaning homes, decorating with religious symbols, making special offerings, and participating in rituals to drive away evil spirits of the past year and welcome prosperity for the new one. It is a deeply spiritual time to honor ancestors and religious figures, reinforcing the community's Buddhist values and cultural bonds.",
-    "greeting": "As you celebrate the New Year, may your life be filled with prosperity, peace, and good health. **Tashi Delek** (Good luck/blessings) and Happy Losar, [contact name]!"
-  },
-  {
-    "calendar": "Hindu (lunisolar)",
-    "date": "11-08",
-    "non_fixed": "Amavasya (new moon) of Kartik month (Oct/Nov)",
-    "holiday": "Diwali (Deepavali)",
-    "location": "India and worldwide",
-    "who": "Hindus",
-    "summary": "Diwali, the 'Festival of Lights,' is one of the most significant Hindu festivals. It spiritually symbolizes the victory of light over darkness, good over evil, and knowledge over ignorance. The five-day festival is celebrated by lighting earthen lamps (diyas), cleaning homes, creating colorful rangoli, exchanging gifts, and joining in prayers for wealth and prosperity to Lakshmi, the goddess of wealth. It is a major holiday for family bonding and cultural reaffirmation globally.",
-    "greeting": "Wishing you a Diwali filled with the glow of Diyas, the warmth of laughter, and a year of prosperity. Happy Deepavali to you and your family, [contact name]!"
-  },
-  {
-    "calendar": "Vietnamese (lunisolar)",
-    "date": "02-17",
-    "non_fixed": "first day of first Vietnamese lunar month",
-    "holiday": "Tet (Vietnamese New Year)",
-    "location": "Vietnam",
-    "who": "Vietnamese people",
-    "summary": "Tết is the most important celebration in Vietnamese culture, marking the arrival of spring and the beginning of the new lunar year. It is a time for family reunion, paying respect to ancestors, and traditional rituals. People clean their homes to sweep away bad luck, decorate with peach and apricot blossoms, and prepare special foods like Bánh Chưng (a savory sticky rice cake). It is a vital holiday for preserving cultural identity and honoring family lineage.",
-    "greeting": "I wish you a New Year filled with health, happiness, and success! **Chúc Mừng Năm Mới** (Happy New Year) and Happy Tết, [contact name]!"
-  },
-  {
-    "calendar": "Persian (solar)",
-    "date": "03-21",
-    "non_fixed": "",
-    "holiday": "Nowruz (Persian New Year)",
-    "location": "Iran and surrounding regions",
-    "who": "Persian and related peoples",
-    "summary": "Nowruz marks the New Year and the first day of spring, coinciding with the vernal equinox. With roots in Zoroastrianism, it is a celebration of renewal and rebirth. Traditional customs include 'house shaking' (thorough spring cleaning), leaping over bonfires, and setting the **Haft-Sīn** table—seven items starting with the Persian letter S that symbolize renewal, prosperity, and health. It is a unifying secular holiday that brings families together to welcome the new season.",
-    "greeting": "Wishing you a year filled with joy, prosperity, and the vibrant spirit of spring! **Nowruz Mobarak** (Happy New Year) and a warm Nowruz greeting to you, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "02-12",
-    "non_fixed": "late February, following the sap flow",
-    "holiday": "Maple Ceremony",
-    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
-    "who": "Haudenosaunee (Iroquois) nations",
-    "summary": "The Maple Ceremony is one of the Haudenosaunee's annual cycles of thanksgiving, held to acknowledge and thank the Creator for the maple sap (sugar water) which provides sustenance at the end of winter. It celebrates the renewal of the forest and the beginning of the agricultural cycle, reaffirming the deep, reciprocal relationship between the people and the natural world.",
-    "greeting": "On this day of thanks for the Maple, may your life be filled with sweetness and renewal. Wishing you a blessed time of gathering and community, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "04-05",
-    "non_fixed": "when the first thunder is heard (late March/early April)",
-    "holiday": "Thunder Dance",
-    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
-    "who": "Haudenosaunee nations",
-    "summary": "The Thunder Dance (or Thunder Ceremony) is held when the first distant thunder of spring is heard. The ceremony is a thanksgiving ritual to the Thunderers (the Sky Dwellers), who bring the rains necessary to water the crops and awaken the earth. It marks the transition from winter to the active growing season, imploring the forces of nature to continue nurturing the land.",
-    "greeting": "Sending you wishes for growth, renewal, and the life-giving energy of the spring rains. May the Thunderers watch over your season ahead, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "05-20",
-    "non_fixed": "when the strawberries ripen (middle to late May)",
-    "holiday": "Strawberry Ceremony",
-    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
-    "who": "Haudenosaunee nations",
-    "summary": "The Strawberry Ceremony gives thanks for the first significant natural fruit of the year—the strawberry, often called the 'leader of the fruits' or the 'heart berry.' This ceremony is a celebration of life, good health, and the abundance of Mother Earth. It is a time for communal celebration, traditional social dances, and the sharing of strawberry juice, signifying purity and heart-centered living.",
-    "greeting": "May the sweetness of the Strawberry Ceremony fill your heart with joy and health. Wishing you a beautiful season of abundance, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "08-03",
-    "non_fixed": "when the green beans are ready for harvest (early August)",
-    "holiday": "String Bean Ceremony",
-    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
-    "who": "Haudenosaunee nations",
-    "summary": "The String Bean Ceremony is one of the mid-summer festivals, held to give thanks for the ripening of the bean crop. The bean is one of the 'Three Sisters' (Corn, Beans, and Squash) that form the foundation of Haudenosaunee agriculture. This ceremony recognizes the Creator's provision and the strength of the community, celebrating the first major food crops that sustain the people through the year.",
-    "greeting": "I hope you enjoy a blessed day of community and gratitude for the bountiful harvest. Wishing you good health and sustenance on this String Bean Ceremony, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "08-18",
-    "non_fixed": "when the corn silk is mature (middle to late August)",
-    "holiday": "Corn Ceremony",
-    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
-    "who": "Haudenosaunee nations",
-    "summary": "The Green Corn Ceremony (or Corn Festival) is the largest and most elaborate of the Haudenosaunee's annual ceremonies, celebrating the ripening of the corn—the most sacred of the Three Sisters. It is a major thanksgiving to the Creator and the 'Three Sisters' spirit for the promise of a successful crop, a time of fasting, feasting, dancing, and naming ceremonies, which reaffirms the communal structure and spiritual balance.",
-    "greeting": "May the spirit of the Three Sisters bring you life, strength, and great blessings. Wishing you joy and prosperity during this Green Corn Ceremony, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "10-15",
-    "non_fixed": "after the final harvest is completed (early to middle October)",
-    "holiday": "Harvest Ceremony",
-    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
-    "who": "Haudenosaunee nations",
-    "summary": "The Harvest Ceremony is the final major thanksgiving festival of the year, held after the last of the crops have been gathered. It is a comprehensive expression of gratitude to the Creator for all the provisions of the growing season—the foods, medicines, and the natural world. This ceremony signals the close of the agricultural cycle and prepares the people for the winter months.",
-    "greeting": "As the season closes, may your home be filled with the warmth of family and the bounty of a good year. Wishing you a peaceful and thankful Harvest Ceremony, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "05-02",
-    "non_fixed": "late April/early May",
-    "holiday": "Homowo Festival",
-    "location": "Greater Accra Region, Ghana",
-    "who": "Ga people of Ghana",
-    "summary": "Homowo, meaning 'Hooting at Hunger,' is an annual harvest festival celebrated by the Ga people. It originated as a commemoration of the time when the Ga people faced a severe famine but successfully managed to overcome it through hard work. The festival involves significant rituals like the sowing of maize, a ban on drumming, and culminating in a feasting and noise-making celebration where a special food called **kpokpoi** is sprinkled to drive out hunger and evil spirits.",
-    "greeting": "May your year be filled with abundance and may you always celebrate the triumph over hardship. Wishing you a joyful Homowo Festival, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "07-05",
-    "non_fixed": "first Sunday of month 7",
-    "holiday": "NAIDOC Week",
-    "location": "Australia",
-    "who": "Aboriginal and Torres Strait Islander peoples",
-    "summary": "NAIDOC Week (National Aborigines and Islanders Day Observance Committee) is an annual event celebrating the history, culture, and achievements of Aboriginal and Torres Strait Islander peoples. It is observed nationally in Australia, not as a single day off, but as a week of coordinated events that increase awareness of the status and treatment of Indigenous Australians, and promote greater cultural understanding and respect in the wider community.",
-    "greeting": "On the occasion of NAIDOC Week, I want to recognize the profound contributions and enduring resilience of Aboriginal and Torres Strait Islander cultures. Wishing you a week of meaningful connection and learning, [contact name]!"
-  },
-  {
-    "calendar": "Tibetan (lunisolar)",
-    "date": "02-18",
-    "non_fixed": "1st day of 1st month of Tibetan calendar",
-    "holiday": "Losar (Tibetan New Year)",
-    "location": "Tibet, Nepal, Bhutan, Mongolia",
-    "who": "Tibetan and other Himalayan Buddhist communities",
-    "summary": "Losar is the most important festival in the Tibetan calendar, marking the New Year. The celebrations, which can last up to 15 days, involve cleaning homes, decorating with religious symbols, making special offerings, and participating in rituals to drive away evil spirits of the past year and welcome prosperity for the new one. It is a deeply spiritual time to honor ancestors and religious figures, reinforcing the community's Buddhist values and cultural bonds.",
-    "greeting": "As you celebrate the New Year, may your life be filled with prosperity, peace, and good health. **Tashi Delek** (Good luck/blessings) and Happy Losar, [contact name]!"
-  },
-  {
-    "calendar": "Hebrew",
-    "date": "09-21",
-    "non_fixed": "1st day of 7th month (Tishrei) of Hebrew calendar",
-    "holiday": "Rosh Hashanah",
-    "location": "Worldwide",
-    "who": "Jewish people",
-    "summary": "Rosh Hashanah is the Jewish New Year, marking the start of the High Holy Days. It is a time of both joyous celebration and solemn introspection, as it is considered the day on which God judges all of creation and inscribes their fate for the coming year. It is celebrated by blowing the *shofar* (ram's horn), attending synagogue services, and eating symbolic foods, such as apples dipped in honey, to wish for a sweet new year.",
-    "greeting": "Wishing you and your family a year filled with health, happiness, and peace. May you be inscribed for a sweet new year! **Shanah Tovah** and Happy Rosh Hashanah, [contact name]!"
-  },
-  {
-    "calendar": "Hebrew",
-    "date": "12-14",
-    "non_fixed": "25th day of 9th month (Kislev) of Hebrew calendar",
-    "holiday": "Hanukkah",
-    "location": "Worldwide",
-    "who": "Jewish people",
-    "summary": "Hanukkah, the Festival of Lights, commemorates the rededication of the Second Temple in Jerusalem following the Maccabean Revolt against the Seleucid Empire. Its cultural significance stems from the miracle where a small cruse of oil, enough for one day, miraculously burned for eight days, allowing time to prepare new kosher oil. It is celebrated over eight nights by lighting one candle on the **menorah** each evening, reciting blessings, playing the **dreidel** game, and eating oil-based foods like **latkes** and **sufganiyot** (doughnuts).",
-    "greeting": "Wishing you and your family a Hanukkah filled with light, hope, and joy! May the miracle of the lights bring you warmth this holiday season. Happy Hanukkah, [contact name]!"
-  },
-  {
-    "calendar": "Chinese (lunisolar)",
-    "date": "02-17",
-    "non_fixed": "1st day of 1st month of Chinese calendar",
-    "holiday": "Chinese New Year (Lunar New Year)",
-    "location": "China and worldwide (Chinese communities)",
-    "who": "Han Chinese and other Sinophone communities",
-    "summary": "Chinese New Year, also known as the Spring Festival, marks the beginning of the new year on the traditional Chinese lunisolar calendar. It is the most important holiday for family reunion, marked by thorough cleaning to sweep away bad luck, firecrackers to ward off evil spirits, and the exchange of red envelopes (**hóngbāo**) containing money. The cultural significance is rooted in honoring ancestors and deities, celebrating the shift from winter to spring, and bringing good fortune for the year ahead.",
-    "greeting": "May your year be filled with prosperity, good health, and success! **Gong Xi Fa Cai** (Wishing you fortune and prosperity) and Happy Lunar New Year, [contact name]!"
-  },
-  {
-    "calendar": "Chinese (lunisolar)",
-    "date": "09-25",
-    "non_fixed": "15th day of 8th month of Chinese calendar",
-    "holiday": "Mid-Autumn Festival",
-    "location": "China and East/Southeast Asia",
-    "who": "Han Chinese and related East Asian cultures",
-    "summary": "The Mid-Autumn Festival, or Moon Festival, is a harvest festival celebrated during the full moon. It symbolizes family reunion and completeness. The core tradition is gathering with loved ones to admire the beautiful full moon and eat **moon** **cakes** (symbolizing the full moon and family unity). It is historically tied to the worship of the moon and the legend of the goddess Chang'e.",
-    "greeting": "Wishing you a life as perfect as the full moon and a festival filled with peace and harmony. Happy Mid-Autumn Festival, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "03-17",
-    "non_fixed": "",
-    "holiday": "St. Patrick's Day",
-    "location": "Ireland and Irish diaspora",
-    "who": "Irish people (and people of Irish descent)",
-    "summary": "St. Patrick's Day is a cultural and religious celebration held on the traditional death date of St. Patrick (c. 385–461), the foremost patron saint of Ireland. It commemorates the arrival of Christianity in Ireland. It has evolved into a global celebration of Irish culture, typically marked by public parades, festivals, the wearing of green attire, and the use of the **shamrock** (which St. Patrick reputedly used to explain the Holy Trinity).",
-    "greeting": "May your day be touched with a bit of Irish luck and your glass never be empty! Wishing you a happy and green St. Patrick's Day, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "11-30",
-    "non_fixed": "",
-    "holiday": "St. Andrew's Day",
-    "location": "Scotland",
-    "who": "Scottish people",
-    "summary": "St. Andrew's Day is the official national day of Scotland, honoring St. Andrew the Apostle, the patron saint of Scotland (whose emblem is the white diagonal cross, the **Saltire**, on the Scottish flag). It is a day to celebrate Scottish culture, including traditional music, food (like cullen skink and haggis), and dancing, affirming national identity and heritage both in Scotland and among the global Scottish diaspora.",
-    "greeting": "On Scotland's national day, may you enjoy a grand celebration of culture, music, and great company. Happy St. Andrew's Day, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "02-06",
-    "non_fixed": "",
-    "holiday": "Sámi National Day",
-    "location": "Norway, Sweden, Finland, Russia (Sápmi)",
-    "who": "Sámi people",
-    "summary": "The Sámi National Day commemorates the first Sámi congress in 1917, a meeting that gathered Sámi from Norway and Sweden to discuss common issues. It is a day to celebrate the culture, language, and indigenous identity of the Sámi people—Europe's only officially recognized Indigenous people. Celebrations involve raising the Sámi flag, wearing the traditional **gákti** costume, and performing the **joik** (traditional singing).",
-    "greeting": "Celebrating the resilience and rich culture of the Sámi people on this important day! May your community thrive. Happy Sámi National Day, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "11-02",
-    "non_fixed": "",
-    "holiday": "Day of the Dead",
-    "location": "Mexico (and parts of Latin America)",
-    "who": "Mexican people (with Aztec/Mesoamerican roots)",
-    "summary": "Día de Muertos is a vibrant and culturally significant holiday where families honor and remember loved ones who have died. It is a celebration of life, not death, where families build decorated altars (**ofrendas**) with the deceased's favorite foods, drinks, marigolds, and photos. The belief is that the spirits return home for one night. It blends Catholic traditions with indigenous Aztec/Mesoamerican rituals, celebrating death as a natural cycle.",
-    "greeting": "May your heart be filled with love and fond memories of those who have passed on. Wishing you a peaceful Day of the Dead, [contact name]!"
-  },
-  {
-    "calendar": "Islamic",
-    "date": "10-21",
-    "non_fixed": "3rd month of Islamic calendar (Rabīʿ al-awwal)",
-    "holiday": "Damba Festival",
-    "location": "Northern Ghana",
-    "who": "Dagomba, Gonja and other peoples of Northern Ghana",
-    "summary": "The Damba Festival is a major traditional festival celebrated by the peoples of Northern Ghana, primarily the Dagomba and Gonja. It marks the birth of the Prophet Muhammad (**Mawlid**), but it also incorporates local traditional chiefs and customs. The festival involves spectacular horse riding, drumming, dancing, and elaborate processions, serving as an important occasion for cultural display, social cohesion, and the affirmation of chieftaincy and tradition.",
-    "greeting": "Wishing you and your family joy and blessings during the Damba Festival! May the drumming and festivities bring you peace and community, [contact name]!"
+    "calendar": "Other (Yoruba)",
+    "date": "06-15",
+    "non_fixed": "Varies regionally (annual masquerade festival)",
+    "holiday": "Odun Egungun (Yoruba Ancestors Festival)",
+    "location": "Nigeria (Yorubaland)",
+    "who": "Yoruba people",
+    "summary": "Odun Egungun is an annual festival that honors the collective spirits of the ancestors. The festival's most visible feature is the appearance of **Egungun** masquerades, richly costumed figures believed to be the physical manifestation of the returning dead. The purpose is to pray for the community's well-being and to emphasize the continued presence and influence of the ancestors in the lives of the living.",
+    "greeting": "May the wisdom and blessings of your ancestors guide your path in the year ahead. Wishing you a powerful and joyous Odun Egungun, [contact name]!",
+    "forlan": "A ku odun Egungun. (Yoruba for Happy Egungun festival.)"
   },
   {
     "calendar": "Gregorian",
@@ -304,20 +210,131 @@
     "date": "06-24",
     "non_fixed": "",
     "holiday": "Inti Raymi (Festival of the Sun)",
-    "location": "Peru (Andes)",
-    "who": "Quechua/Incan indigenous peoples of the Andes",
+    "location": "Cusco, Peru",
+    "who": "Quechua (Inca) communities",
     "summary": "Inti Raymi is a traditional Inca religious ceremony that honors the Sun God, Inti. Historically, it was the most important of the four Incan festivals, celebrating the winter solstice and marking the beginning of the planting season in the Andes. Today, it is a spectacular and culturally significant theatrical representation of the ceremony, celebrating Quechua heritage and reaffirming the cultural identity of the Andean people.",
-    "greeting": "On this day of Inti Raymi, I send you wishes for warmth, strength, and abundance in the coming year, just as the Sun God provides for the land. Happy Festival of the Sun, [contact name]!"
+    "greeting": "On this day of Inti Raymi, I send you wishes for warmth, strength, and abundance in the coming year, just as the Sun God provides for the land. Happy Festival of the Sun, [contact name]!",
+    "forlan": "Haylli Inti! (Quechua for Victory Sun!)"
   },
   {
-    "calendar": "Tamil (solar)",
-    "date": "01-15",
-    "non_fixed": "1st day of 10th month (Thai) of Tamil calendar",
-    "holiday": "Thai Pongal",
-    "location": "Tamil Nadu (India), Sri Lanka",
-    "who": "Tamil people",
-    "summary": "Thai Pongal is a harvest festival, a four-day celebration of thanksgiving to the Sun God (Surya) for a bountiful harvest. The central ritual involves boiling the first rice of the harvest with milk, jaggery (raw sugar), and spices in a new pot until it bubbles over (**pongal**), symbolizing prosperity. It is a time for family gatherings, cleaning homes, and celebrating the renewal of life and prosperity.",
-    "greeting": "Wishing you a life overflowing with sweetness, prosperity, and the blessing of a good harvest. **Thai Pirandhal Vazhi Pirakkum** (The commencement of Thai month brings prosperity). Happy Pongal, [contact name]!"
+    "calendar": "Gregorian",
+    "date": "07-05",
+    "non_fixed": "first Sunday of month 7",
+    "holiday": "NAIDOC Week",
+    "location": "Australia",
+    "who": "Aboriginal and Torres Strait Islander peoples",
+    "summary": "NAIDOC Week (National Aborigines and Islanders Day Observance Committee) is an annual event celebrating the history, culture, and achievements of Aboriginal and Torres Strait Islander peoples. It is observed nationally in Australia, not as a single day off, but as a week of coordinated events that increase awareness of the status and treatment of Indigenous Australians, and promote greater cultural understanding and respect in the wider community.",
+    "greeting": "On the occasion of NAIDOC Week, I want to recognize the profound contributions and enduring resilience of Aboriginal and Torres Strait Islander cultures. Wishing you a week of meaningful connection and learning, [contact name]!"
+  },
+  {
+    "calendar": "Māori (lunar)",
+    "date": "07-10",
+    "non_fixed": "Friday closest to Matariki rising (Tangaroa lunar period of Pipiri, late June/early July)",
+    "holiday": "Matariki (Māori New Year)",
+    "location": "New Zealand",
+    "who": "Māori people",
+    "summary": "Matariki is the Māori name for the cluster of stars known as the Pleiades. Its first rising, usually in late June or early July, signals the start of the Māori New Year. It is a time for reflection on the past year, planning for the year ahead, celebrating the harvest, honoring the dead, and spending time with whānau (family). Its cultural significance lies in marking the cycle of life, the natural world, and a reconnection to ancestral traditions.",
+    "greeting": "May the Matariki star cluster shine brightly on you and your loved ones! Wishing you a period of reflection, renewal, and a prosperous Māori New Year. **Kia Ora** and Happy Matariki, [contact name]!",
+    "forlan": "Ngā mihi o Matariki, te tau hou Māori. (Greetings of Matariki, the Māori New Year.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "08-01",
+    "non_fixed": "Early August (end of rainy season)",
+    "holiday": "New Yam Festival (Iri ji)",
+    "location": "Nigeria (Igboland)",
+    "who": "Igbo people",
+    "summary": "The New Yam Festival is a celebration of the harvest and the primary food crop, the yam, which is considered 'the king of crops' in Igboland. It is a highly significant cultural event thanking the earth goddess (**Ani**) and the yam deity (**Ifejioku**) for a good harvest. The festival marks the ritual consumption of the new yams, which cannot be eaten until consecrated, and involves masquerades, feasting, and communal renewal.",
+    "greeting": "May the New Yam Festival bring great prosperity, health, and abundance to your household. Happy Iri Ji, [contact name]!",
+    "forlan": "Iri ji oma. (Igbo for Good new yam.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "08-03",
+    "non_fixed": "when the green beans are ready for harvest (early August)",
+    "holiday": "String Bean Ceremony",
+    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
+    "who": "Haudenosaunee nations",
+    "summary": "The String Bean Ceremony is one of the mid-summer festivals, held to give thanks for the ripening of the bean crop. The bean is one of the 'Three Sisters' (Corn, Beans, and Squash) that form the foundation of Haudenosaunee agriculture. This ceremony recognizes the Creator's provision and the strength of the community, celebrating the first major food crops that sustain the people through the year.",
+    "greeting": "I hope you enjoy a blessed day of community and gratitude for the bountiful harvest. Wishing you good health and sustenance on this String Bean Ceremony, [contact name]!",
+    "forlan": "Niawen. (Mohawk for Thank you/Gratitude.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "08-18",
+    "non_fixed": "when the corn silk is mature (middle to late August)",
+    "holiday": "Corn Ceremony",
+    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
+    "who": "Haudenosaunee nations",
+    "summary": "The Green Corn Ceremony (or Corn Festival) is the largest and most elaborate of the Haudenosaunee's annual ceremonies, celebrating the ripening of the corn—the most sacred of the Three Sisters. It is a major thanksgiving to the Creator and the 'Three Sisters' spirit for the promise of a successful crop, a time of fasting, feasting, dancing, and naming ceremonies, which reaffirms the communal structure and spiritual balance.",
+    "greeting": "May the spirit of the Three Sisters bring you life, strength, and great blessings. Wishing you joy and prosperity during this Green Corn Ceremony, [contact name]!",
+    "forlan": "Niawen. (Mohawk for Thank you/Gratitude.)"
+  },
+  {
+    "calendar": "Other (Hindu lunar)",
+    "date": "09-08",
+    "non_fixed": "5th day of the waxing moon of Bhadrapada (Aug–Sept)",
+    "holiday": "Nuakhai",
+    "location": "Western Odisha, India",
+    "who": "Farmers in the Oriya (Odisha) community",
+    "summary": "Nuakhai is an agricultural festival that marks the eating of the new rice crop. **Nua** means 'new' and **khai** means 'eat.' The ceremony involves offering the first grains of the new harvest to the local presiding deity. It is a critical festival for farmers, signifying the start of the harvest season, and is celebrated through family gatherings, folk dance (**Dalkhai**), and communal feasts.",
+    "greeting": "May the blessings of the new harvest bring prosperity and happiness to your home. Happy Nuakhai, [contact name]!",
+    "forlan": "Nuakhai Juhar. (Kosali/Oriya traditional greeting for Nuakhai.)"
+  },
+  {
+    "calendar": "Ethiopian (Coptic)",
+    "date": "09-11",
+    "non_fixed": "",
+    "holiday": "Enkutatash (Ethiopian New Year)",
+    "location": "Ethiopia and Eritrea",
+    "who": "Ethiopian and Eritrean people",
+    "summary": "Enkutatash marks the New Year in the Ethiopian calendar. The date coincides with the end of the long rainy season and the blooming of the yellow Meskel daisies (Ades Ababa), symbolizing renewal and hope. It is a time for family gatherings, feasting, and the giving of small gifts and greetings, celebrating the transition to the new year and the arrival of the spring season.",
+    "greeting": "Wishing you and your family a beautiful New Year filled with the promise of spring! Happy Enkutatash, [contact name]!",
+    "forlan": "Enkuan le'Amet Addis Metse't. (Amharic for Happy New Year.)"
+  },
+  {
+    "calendar": "Hebrew",
+    "date": "09-21",
+    "non_fixed": "1st day of 7th month (Tishrei) of Hebrew calendar",
+    "holiday": "Rosh Hashanah",
+    "location": "Worldwide",
+    "who": "Jewish people",
+    "summary": "Rosh Hashanah is the Jewish New Year, marking the start of the High Holy Days. It is a time of both joyous celebration and solemn introspection, as it is considered the day on which God judges all of creation and inscribes their fate for the coming year. It is celebrated by blowing the *shofar* (ram's horn), attending synagogue services, and eating symbolic foods, such as apples dipped in honey, to wish for a sweet new year.",
+    "greeting": "Wishing you and your family a year filled with health, happiness, and peace. May you be inscribed for a sweet new year! **Shanah Tovah** and Happy Rosh Hashanah, [contact name]!",
+    "forlan": "L'Shanah Tovah Tikatevu. (Hebrew for May you be inscribed for a good year.)"
+  },
+  {
+    "calendar": "Chinese (lunisolar)",
+    "date": "09-25",
+    "non_fixed": "15th day of 8th month of Chinese calendar",
+    "holiday": "Mid-Autumn Festival",
+    "location": "China and East/Southeast Asia",
+    "who": "Han Chinese and related East Asian cultures",
+    "summary": "The Mid-Autumn Festival, or Moon Festival, is a harvest festival celebrated during the full moon. It symbolizes family reunion and completeness. The core tradition is gathering with loved ones to admire the beautiful full moon and eat **moon** **cakes** (symbolizing the full moon and family unity). It is historically tied to the worship of the moon and the legend of the goddess Chang'e.",
+    "greeting": "Wishing you a life as perfect as the full moon and a festival filled with peace and harmony. Happy Mid-Autumn Festival, [contact name]!",
+    "forlan": "Zhōngqiū Jié Kuàilè. (Mandarin Chinese for Happy Mid-Autumn Festival.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "09-27",
+    "non_fixed": "Late September or early October",
+    "holiday": "Irreechaa",
+    "location": "Ethiopia (Oromia Region)",
+    "who": "Oromo people",
+    "summary": "Irreechaa is a thanksgiving festival celebrated by the Oromo people to mark the transition from the rainy season (**Birraa**) to the harvest season. The central rite involves making a prayer of thanks to Waaqaa (God) by carrying and submerging freshly cut green grass and flowers into a body of water (like a river or lake). It is a major event promoting peace, unity, and cultural identity.",
+    "greeting": "Wishing you a season of peace, health, and abundant blessings. May the spirit of Irreechaa bring joy to you and your family, [contact name]!",
+    "forlan": "Horaa Bulaa. (Oromo traditional greeting wishing health and prosperity.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "10-08",
+    "non_fixed": "",
+    "holiday": "Mehregan (Mehrgān)",
+    "location": "Iran and neighboring Persian communities",
+    "who": "Zoroastrians and Iranian cultural communities",
+    "summary": "Mehregan is an ancient Persian harvest festival dedicated to the deity Mithra (Mehr), who represents light, friendship, truth, and love. Celebrated at the autumn equinox, it is a day of thanksgiving for the harvest and a time to celebrate friendship and unity. Traditions include setting a special cloth decorated with autumn flowers and objects symbolizing the harvest, like nuts and pomegranates.",
+    "greeting": "Wishing you a warm, bountiful, and joyful celebration of friendship and light. Happy Mehregan, [contact name]!",
+    "forlan": "Mehregan Mobarak. (Persian/Farsi for Happy Mehregan.)"
   },
   {
     "calendar": "Gregorian",
@@ -331,33 +348,69 @@
   },
   {
     "calendar": "Gregorian",
-    "date": "03-03",
-    "non_fixed": "",
-    "holiday": "Hinamatsuri (Girls' Day)",
-    "location": "Japan",
-    "who": "Japanese (families with young girls)",
-    "summary": "Hinamatsuri, or Girls' Day (Doll Festival), is a day dedicated to praying for the health, happiness, and prosperity of young girls. Families display elaborate sets of traditional ornamental **Hina dolls** (representing the Emperor, Empress, attendants, and musicians of the Heian period) dressed in ancient court attire. Offerings of rice cakes (**hishimochi**) and sweet white sake (**shirozake**) are made to the dolls.",
-    "greeting": "Wishing you and your family joy and good fortune on this special day. May your daughter's health and happiness bloom like the peach blossoms. Happy Hinamatsuri, [contact name]!"
+    "date": "10-15",
+    "non_fixed": "after the final harvest is completed (early to middle October)",
+    "holiday": "Harvest Ceremony",
+    "location": "Haudenosaunee (Iroquois) Confederacy, North America",
+    "who": "Haudenosaunee nations",
+    "summary": "The Harvest Ceremony is the final major thanksgiving festival of the year, held after the last of the crops have been gathered. It is a comprehensive expression of gratitude to the Creator for all the provisions of the growing season—the foods, medicines, and the natural world. This ceremony signals the close of the agricultural cycle and prepares the people for the winter months.",
+    "greeting": "As the season closes, may your home be filled with the warmth of family and the bounty of a good year. Wishing you a peaceful and thankful Harvest Ceremony, [contact name]!",
+    "forlan": "Niawen. (Mohawk for Thank you/Gratitude.)"
   },
   {
-    "calendar": "Māori",
-    "date": "07-10",
-    "non_fixed": "Friday closest to Matariki rising (late June/early July)",
-    "holiday": "Matariki (Māori New Year)",
-    "location": "New Zealand",
-    "who": "Māori people",
-    "summary": "Matariki is the Māori name for the cluster of stars known as the Pleiades. Its first rising, usually in late June or early July, signals the start of the Māori New Year. It is a time for reflection on the past year, honoring the dead, celebrating the present, and planning for the future, reaffirming Māori cultural identity and connection to the natural cycles.",
-    "greeting": "May the Matariki star cluster shine brightly on you and your loved ones! Wishing you a period of reflection, renewal, and a prosperous Māori New Year. **Kia Ora** and Happy Matariki, [contact name]!"
+    "calendar": "Islamic",
+    "date": "10-21",
+    "non_fixed": "3rd month of Islamic calendar (Rabīʿ al-awwal)",
+    "holiday": "Damba Festival",
+    "location": "Northern Ghana",
+    "who": "Dagomba, Gonja and other peoples of Northern Ghana",
+    "summary": "The Damba Festival is a major traditional festival celebrated by the peoples of Northern Ghana, primarily the Dagomba and Gonja. It marks the birth of the Prophet Muhammad (**Mawlid**), but it also incorporates local traditional chiefs and customs. The festival involves spectacular horse riding, drumming, dancing, and elaborate processions, serving as an important occasion for cultural display, social cohesion, and the affirmation of chieftaincy and tradition.",
+    "greeting": "Wishing you and your family joy and blessings during the Damba Festival! May the drumming and festivities bring you peace and community, [contact name]!",
+    "forlan": "Mawlid Mubarak. (Arabic/General Islamic greeting for Blessed Birthday.)"
   },
   {
     "calendar": "Gregorian",
-    "date": "10-08",
+    "date": "11-02",
     "non_fixed": "",
-    "holiday": "Mehregan (Mehrgān)",
-    "location": "Iran and neighboring Persian communities",
-    "who": "Zoroastrians and Iranian cultural communities",
-    "summary": "Mehregan is an ancient Persian harvest festival dedicated to the deity Mithra (Mehr), who represents light, friendship, truth, and love. Celebrated at the autumn equinox, it is a day of thanksgiving for the harvest and a time to celebrate friendship and unity. Traditions include setting a special cloth decorated with autumn flowers and objects symbolizing the harvest, like nuts and pomegranates.",
-    "greeting": "Wishing you a warm, bountiful, and joyful celebration of friendship and light. Happy Mehregan, [contact name]!"
+    "holiday": "Día de Muertos (Day of the Dead)",
+    "location": "Mexico",
+    "who": "Mexican people of indigenous heritage",
+    "summary": "This multi-day holiday focuses on gatherings of family and friends to pray for and remember friends and family members who have died, and help support their spiritual journey. It's a vibrant, joyous, and significant cultural tradition, deeply rooted in indigenous customs, where death is embraced as a natural part of the human experience. Families build private altars (ofrendas) decorated with marigolds, the favorite foods and beverages of the departed, and photos.",
+    "greeting": "May the beautiful traditions of Día de Muertos bring you comfort, connection, and fond memories of your loved ones. Wishing you a peaceful Day of the Dead, [contact name]!",
+    "forlan": "Feliz Día de Muertos. Que la luz de las veladoras guíe a tus seres queridos. (Happy Day of the Dead. May the light of the candles guide your loved ones.)"
+  },
+  {
+    "calendar": "Hindu (lunisolar)",
+    "date": "11-08",
+    "non_fixed": "Amavasya (new moon) of Kartik month (Oct/Nov)",
+    "holiday": "Diwali (Deepavali)",
+    "location": "India and worldwide",
+    "who": "Hindus",
+    "summary": "Diwali, the 'Festival of Lights,' is one of the most significant Hindu festivals. It spiritually symbolizes the victory of light over darkness, good over evil, and knowledge over ignorance. The five-day festival is celebrated by lighting earthen lamps (diyas), cleaning homes, creating colorful rangoli, exchanging gifts, and joining in prayers for wealth and prosperity to Lakshmi, the goddess of wealth. It is a major holiday for family bonding and cultural reaffirmation globally.",
+    "greeting": "Wishing you a Diwali filled with the glow of Diyas, the warmth of laughter, and a year of prosperity. Happy Deepavali to you and your family, [contact name]!",
+    "forlan": "Shubh Deepavali. (Hindi for Auspicious Deepavali.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "11-30",
+    "non_fixed": "",
+    "holiday": "St. Andrew's Day",
+    "location": "Scotland",
+    "who": "Scottish people",
+    "summary": "St. Andrew's Day is the official national day of Scotland, honoring St. Andrew the Apostle, the patron saint of Scotland (whose emblem is the white diagonal cross, the **Saltire**, on the Scottish flag). It is a day to celebrate Scottish culture, including traditional music, food (like cullen skink and haggis), and dancing, affirming national identity and heritage both in Scotland and among the global Scottish diaspora.",
+    "greeting": "On Scotland's national day, may you enjoy a grand celebration of culture, music, and great company. Happy St. Andrew's Day, [contact name]!",
+    "forlan": "Latha Naomh Anndra sona dhut. (Scottish Gaelic for Happy St. Andrew's Day to you.)"
+  },
+  {
+    "calendar": "Gregorian",
+    "date": "12-14",
+    "non_fixed": "25th day of 9th month (Kislev) of Hebrew calendar",
+    "holiday": "Hanukkah",
+    "location": "Worldwide",
+    "who": "Jewish people",
+    "summary": "Hanukkah, the Festival of Lights, commemorates the rededication of the Second Temple in Jerusalem following the Maccabean Revolt against the Seleucid Empire. Its cultural significance stems from the miracle where a small cruse of oil, enough for one day, miraculously burned for eight days, allowing time to prepare new kosher oil. It is celebrated over eight nights by lighting one candle on the **menorah** each evening, reciting blessings, playing the **dreidel** game, and eating oil-based foods like **latkes** and **sufganiyot** (doughnuts).",
+    "greeting": "Wishing you and your family a Hanukkah filled with light, hope, and joy! May the miracle of the lights bring you warmth this holiday season. Happy Hanukkah, [contact name]!",
+    "forlan": "Chag Urim Sameach. (Hebrew for Happy Festival of Lights.)"
   },
   {
     "calendar": "Gregorian",
@@ -367,76 +420,7 @@
     "location": "Iraq (primarily Yazidi regions)",
     "who": "Yazidi religious community",
     "summary": "The Feast of Ezid is the most important annual religious holiday for the Yazidi community, a time of fasting and spiritual renewal. It follows a three-day fast from sunrise to sunset in the first three weeks of December. The feast day itself is a joyous occasion for family gatherings, prayer, and sharing special foods, affirming the community's ancient faith and resilience.",
-    "greeting": "Wishing you and your loved ones a blessed Feast of Ezid, filled with peace, light, and spiritual warmth. May your prayers be answered, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "04-25",
-    "non_fixed": "April 25–28",
-    "holiday": "Ziyara (Pilgrimage to Nabi Shuayb)",
-    "location": "Israel (Jethro’s Tomb at Nabi Shuayb)",
-    "who": "Druze community",
-    "summary": "The Ziyara is an annual four-day pilgrimage to the tomb of Nabi Shuayb (identified as the Prophet Jethro, Moses' father-in-law) near Tiberias. It is the most important holiday for the Druze religious community, a time for religious observance, social bonding, and affirming their faith's traditions. The pilgrimage involves religious rites, communal feasting, and cultural celebration.",
-    "greeting": "May your pilgrimage be blessed and your spirit renewed. Wishing you and your community a peaceful Ziyara, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "09-27",
-    "non_fixed": "Late September or early October",
-    "holiday": "Irreechaa",
-    "location": "Ethiopia (Oromia Region)",
-    "who": "Oromo people",
-    "summary": "Irreechaa is a thanksgiving festival celebrated by the Oromo people to mark the transition from the rainy season (**Birraa**) to the harvest season. The central rite involves making a prayer of thanks to Waaqaa (God) by carrying and submerging freshly cut green grass and flowers into a body of water (like a river or lake). It is a major event promoting peace, unity, and cultural identity.",
-    "greeting": "Wishing you a season of peace, health, and abundant blessings. May the spirit of Irreechaa bring joy to you and your family, [contact name]!"
-  },
-  {
-    "calendar": "Other (Hindu lunar)",
-    "date": "09-08",
-    "non_fixed": "5th day of the waxing moon of Bhadrapada (Aug–Sept)",
-    "holiday": "Nuakhai",
-    "location": "Western Odisha, India",
-    "who": "Farmers in the Oriya (Odisha) community",
-    "summary": "Nuakhai is an agricultural festival that marks the eating of the new rice crop. **Nua** means 'new' and **khai** means 'eat.' The ceremony involves offering the first grains of the new harvest to the local presiding deity. It is a critical festival for farmers, signifying the start of the harvest season, and is celebrated through family gatherings, folk dance (**Dalkhai**), and communal feasts.",
-    "greeting": "May the blessings of the new harvest bring prosperity and happiness to your home. Happy Nuakhai, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "08-01",
-    "non_fixed": "Early August (end of rainy season)",
-    "holiday": "New Yam Festival (Iri ji)",
-    "location": "Nigeria (Igboland)",
-    "who": "Igbo people",
-    "summary": "The New Yam Festival is a celebration of the harvest and the primary food crop, the yam, which is considered 'the king of crops' in Igboland. It is a highly significant cultural event thanking the earth goddess (**Ani**) and the yam deity (**Ifejioku**) for a good harvest. The festival marks the ritual consumption of the new yams, which cannot be eaten until consecrated, and involves masquerades, feasting, and communal renewal.",
-    "greeting": "May the New Yam Festival bring great prosperity, health, and abundance to your household. Happy Iri Ji, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "01-10",
-    "non_fixed": "",
-    "holiday": "Fête du Vodoun (Vodun Festival)",
-    "location": "Benin",
-    "who": "Vodun practitioners in Benin",
-    "summary": "Fête du Vodoun is a national holiday in Benin that celebrates the West African Vodun (Voodoo) religion and its cultural significance. It is a day for followers to honor their deities and ancestors through ceremonies, rituals, traditional drumming, and dancing. The festival is a vibrant public demonstration of a major regional religious tradition that connects the spiritual world with the living.",
-    "greeting": "Wishing you peace, connection, and spiritual strength on the Fête du Vodoun. May your ancestors and deities bless your path, [contact name]!"
-  },
-  {
-    "calendar": "Other (Yoruba)",
-    "date": "06-15",
-    "non_fixed": "Varies regionally (annual masquerade festival)",
-    "holiday": "Odun Egungun (Yoruba Ancestors Festival)",
-    "location": "Nigeria (Yorubaland)",
-    "who": "Yoruba people",
-    "summary": "Odun Egungun is an annual festival that honors the collective spirits of the ancestors. The festival's most visible feature is the appearance of **Egungun** masquerades, richly costumed figures believed to be the physical manifestation of the returning dead. The purpose is to pray for the community's well-being and to emphasize the continued presence and influence of the ancestors in the lives of the living.",
-    "greeting": "May the wisdom and blessings of your ancestors guide your path in the year ahead. Wishing you a powerful and joyous Odun Egungun, [contact name]!"
-  },
-  {
-    "calendar": "Gregorian",
-    "date": "10-31",
-    "non_fixed": "",
-    "holiday": "Día de los Muertos (Day of the Dead)",
-    "location": "Mexico",
-    "who": "Mexican communities",
-    "summary": "Día de los Muertos is a vibrant and culturally significant holiday where families honor and remember loved ones who have died. It is a celebration of life, not death, where families build decorated altars (**ofrendas**) with the deceased's favorite foods, drinks, marigolds, and photos. The belief is that the spirits return home for one night. It blends Catholic traditions with indigenous Aztec/Mesoamerican rituals, celebrating death as a natural cycle.",
-    "greeting": "May your heart be filled with love and fond memories of those who have passed on. Wishing you a peaceful Day of the Dead, [contact name]!"
+    "greeting": "Wishing you and your loved ones a blessed Feast of Ezid, filled with peace, light, and spiritual warmth. May your prayers be answered, [contact name]!",
+    "forlan": "Cejna Êzîd Pîroz Be. (Kurmanji Kurdish for Happy Feast of Ezid.)"
   }
 ]
