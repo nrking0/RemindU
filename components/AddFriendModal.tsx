@@ -2,6 +2,7 @@ import { Text, View } from "@/components/Themed";
 import { useColorScheme } from "@/components/useColorScheme";
 import Colors from "@/constants/Colors";
 import { Contact } from "@/hooks/useContacts";
+import DateTimePicker from "@react-native-community/datetimepicker";
 import * as ImagePicker from "expo-image-picker";
 import React, { useState } from "react";
 import {
@@ -32,12 +33,15 @@ export default function AddFriendModal({
   const [lastName, setLastName] = useState("");
   const [birthday, setBirthday] = useState("");
   const [birthdayDate, setBirthdayDate] = useState<Date>(new Date());
+  const [showBirthdayPicker, setShowBirthdayPicker] = useState(false);
   const [photoUri, setPhotoUri] = useState<string | null>(null);
   const [holidays, setHolidays] = useState<{ name: string; date: string }[]>(
     []
   );
   const [newHolidayName, setNewHolidayName] = useState("");
   const [newHolidayDate, setNewHolidayDate] = useState("");
+  const [holidayDateObj, setHolidayDateObj] = useState<Date>(new Date());
+  const [showHolidayDatePicker, setShowHolidayDatePicker] = useState(false);
   const [isHolidaySelectorVisible, setIsHolidaySelectorVisible] = useState(false);
 
   const colorScheme = useColorScheme();
@@ -68,6 +72,13 @@ export default function AddFriendModal({
     setHolidays(holidays.filter((_, i) => i !== index));
   };
 
+  const formatDateToString = (date: Date): string => {
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${month}/${day}/${year}`;
+  };
+
   const formatDateInput = (text: string) => {
     const numbers = text.replace(/\D/g, "");
 
@@ -83,15 +94,6 @@ export default function AddFriendModal({
     }
   };
 
-  const handleBirthdayChange = (text: string) => {
-    const formatted = formatDateInput(text);
-    setBirthday(formatted);
-  };
-
-  const handleHolidayDateChange = (text: string) => {
-    const formatted = formatDateInput(text);
-    setNewHolidayDate(formatted);
-  };
 
   const validateDate = (dateString: string) => {
     if (dateString.length !== 10) return false;
@@ -187,10 +189,13 @@ export default function AddFriendModal({
     setLastName("");
     setBirthday("");
     setBirthdayDate(new Date());
+    setShowBirthdayPicker(false);
     setPhotoUri(null);
     setHolidays([]);
     setNewHolidayName("");
     setNewHolidayDate("");
+    setHolidayDateObj(new Date());
+    setShowHolidayDatePicker(false);
   };
 
   const handleClose = () => {
@@ -295,18 +300,30 @@ export default function AddFriendModal({
               <Text style={[styles.label, { color: colors.text }]}>
                 Birthday
               </Text>
-              <View style={styles.dateInputContainer}>
-                <TextInput
-                  style={[inputStyle, styles.dateInput]}
-                  value={birthday}
-                  onChangeText={handleBirthdayChange}
-                  placeholder="MM/DD/YYYY"
-                  placeholderTextColor={colors.text + "60"}
-                  keyboardType="numeric"
-                  maxLength={10}
-                />
-              </View>
+              <TouchableOpacity
+                style={[inputStyle, styles.dateButton]}
+                onPress={() => setShowBirthdayPicker(true)}
+              >
+                <Text style={[styles.dateButtonText, { color: birthday ? colors.text : colors.text + "60" }]}>
+                  {birthday || "Select birthday"}
+                </Text>
+              </TouchableOpacity>
             </View>
+
+            {showBirthdayPicker && (
+              <DateTimePicker
+                value={birthdayDate}
+                mode="date"
+                display={Platform.OS === "ios" ? "spinner" : "default"}
+                onChange={(event, selectedDate) => {
+                  setShowBirthdayPicker(Platform.OS === "ios" ? showBirthdayPicker : false);
+                  if (selectedDate) {
+                    setBirthdayDate(selectedDate);
+                    setBirthday(formatDateToString(selectedDate));
+                  }
+                }}
+              />
+            )}
 
             <View style={styles.section}>
               <View style={styles.sectionHeader}>
@@ -366,17 +383,30 @@ export default function AddFriendModal({
                   placeholder="Holiday name"
                   placeholderTextColor={colors.text + "60"}
                 />
-                <View style={styles.dateInputContainer}>
-                  <TextInput
-                    style={[inputStyle, styles.dateInput]}
-                    value={newHolidayDate}
-                    onChangeText={handleHolidayDateChange}
-                    placeholder="MM/DD/YYYY"
-                    placeholderTextColor={colors.text + "60"}
-                    keyboardType="numeric"
-                    maxLength={10}
+                <TouchableOpacity
+                  style={[inputStyle, styles.dateButton]}
+                  onPress={() => setShowHolidayDatePicker(true)}
+                >
+                  <Text style={[styles.dateButtonText, { color: newHolidayDate ? colors.text : colors.text + "60" }]}>
+                    {newHolidayDate || "Select date"}
+                  </Text>
+                </TouchableOpacity>
+
+                {showHolidayDatePicker && (
+                  <DateTimePicker
+                    value={holidayDateObj}
+                    mode="date"
+                    display={Platform.OS === "ios" ? "spinner" : "default"}
+                    onChange={(event, selectedDate) => {
+                      setShowHolidayDatePicker(Platform.OS === "ios" ? showHolidayDatePicker : false);
+                      if (selectedDate) {
+                        setHolidayDateObj(selectedDate);
+                        setNewHolidayDate(formatDateToString(selectedDate));
+                      }
+                    }}
                   />
-                </View>
+                )}
+
                 <TouchableOpacity
                   style={[styles.addButton, { backgroundColor: colors.tint }]}
                   onPress={addHoliday}
@@ -539,5 +569,14 @@ const styles = StyleSheet.create({
   },
   dateInput: {
     flex: 1
+  },
+  dateButton: {
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    borderRadius: 8,
+    justifyContent: "center"
+  },
+  dateButtonText: {
+    fontSize: 16
   }
 });

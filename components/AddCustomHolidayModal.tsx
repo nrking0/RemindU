@@ -2,6 +2,7 @@ import { Text, View } from "@/components/Themed";
 import { useColorScheme } from "@/components/useColorScheme";
 import Colors from "@/constants/Colors";
 import { Contact, useContacts } from "@/hooks/useContacts";
+import DateTimePicker from "@react-native-community/datetimepicker";
 import React, { useState } from "react";
 import {
     Alert,
@@ -26,6 +27,8 @@ export default function AddCustomHolidayModal({
 }: AddCustomHolidayModalProps) {
   const [holidayName, setHolidayName] = useState("");
   const [holidayDate, setHolidayDate] = useState("");
+  const [holidayDateObj, setHolidayDateObj] = useState<Date>(new Date());
+  const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedContactIds, setSelectedContactIds] = useState<string[]>([]);
   const [isContactSelectorVisible, setIsContactSelectorVisible] =
     useState(false);
@@ -34,24 +37,11 @@ export default function AddCustomHolidayModal({
   const colors = Colors[colorScheme ?? "light"];
   const { contacts, addContact } = useContacts();
 
-  const formatDateInput = (text: string) => {
-    const numbers = text.replace(/\D/g, "");
-
-    if (numbers.length <= 2) {
-      return numbers;
-    } else if (numbers.length <= 4) {
-      return `${numbers.slice(0, 2)}/${numbers.slice(2)}`;
-    } else {
-      return `${numbers.slice(0, 2)}/${numbers.slice(2, 4)}/${numbers.slice(
-        4,
-        8
-      )}`;
-    }
-  };
-
-  const handleDateChange = (text: string) => {
-    const formatted = formatDateInput(text);
-    setHolidayDate(formatted);
+  const formatDateToString = (date: Date): string => {
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${month}/${day}/${year}`;
   };
 
   const validateDate = (dateString: string) => {
@@ -111,6 +101,8 @@ export default function AddCustomHolidayModal({
 
     setHolidayName("");
     setHolidayDate("");
+    setHolidayDateObj(new Date());
+    setShowDatePicker(false);
     setSelectedContactIds([]);
     onClose();
   };
@@ -118,6 +110,8 @@ export default function AddCustomHolidayModal({
   const handleClose = () => {
     setHolidayName("");
     setHolidayDate("");
+    setHolidayDateObj(new Date());
+    setShowDatePicker(false);
     setSelectedContactIds([]);
     setIsContactSelectorVisible(false);
     onClose();
@@ -161,7 +155,6 @@ export default function AddCustomHolidayModal({
             style={styles.content}
             keyboardShouldPersistTaps="handled"
           >
-            {/* Holiday Name */}
             <View style={styles.section}>
               <Text style={[styles.label, { color: colors.text }]}>
                 Holiday Name
@@ -185,24 +178,38 @@ export default function AddCustomHolidayModal({
 
             <View style={styles.section}>
               <Text style={[styles.label, { color: colors.text }]}>Date</Text>
-              <TextInput
+              <TouchableOpacity
                 style={[
                   styles.input,
+                  styles.dateButton,
                   {
                     backgroundColor:
                       colorScheme === "dark" ? "#333" : "#f5f5f5",
-                    color: colors.text,
                     borderColor: colors.text + "20"
                   }
                 ]}
-                placeholder="MM/DD/YYYY"
-                placeholderTextColor={colors.text + "60"}
-                value={holidayDate}
-                onChangeText={handleDateChange}
-                keyboardType="numeric"
-                maxLength={10}
-              />
+                onPress={() => setShowDatePicker(true)}
+              >
+                <Text style={[styles.dateButtonText, { color: holidayDate ? colors.text : colors.text + "60" }]}>
+                  {holidayDate || "Select date"}
+                </Text>
+              </TouchableOpacity>
             </View>
+
+            {showDatePicker && (
+              <DateTimePicker
+                value={holidayDateObj}
+                mode="date"
+                display={Platform.OS === "ios" ? "spinner" : "default"}
+                onChange={(event, selectedDate) => {
+                  setShowDatePicker(Platform.OS === "ios" ? showDatePicker : false);
+                  if (selectedDate) {
+                    setHolidayDateObj(selectedDate);
+                    setHolidayDate(formatDateToString(selectedDate));
+                  }
+                }}
+              />
+            )}
 
             <View style={styles.section}>
               <View style={styles.sectionHeader}>
@@ -386,5 +393,11 @@ const styles = StyleSheet.create({
   checkmark: {
     fontSize: 20,
     fontWeight: "bold"
+  },
+  dateButton: {
+    justifyContent: "center"
+  },
+  dateButtonText: {
+    fontSize: 16
   }
 });

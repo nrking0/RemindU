@@ -183,17 +183,15 @@ export default function EventDetailsModal({
             { backgroundColor: colors.background, maxHeight: "80%" },
           ]}
         >
-          {/* Header */}
           <View style={styles.header}>
+            <View style={{ flex: 1 }} />
             <TouchableOpacity onPress={onClose}>
               <Text style={[styles.closeButton, { color: colors.tint }]}>
                 Done
               </Text>
             </TouchableOpacity>
-            <View style={{ flex: 1 }} />
           </View>
 
-          {/* Title */}
           <View style={styles.titleContainer}>
             <Text style={[styles.title, { color: colors.text }]}>
               {event.name}
@@ -204,7 +202,6 @@ export default function EventDetailsModal({
             style={styles.scrollContent}
             showsVerticalScrollIndicator={false}
           >
-            {/* Celebrating Contacts */}
             <View style={styles.section}>
               <Text style={[styles.sectionHeader, { color: colors.text }]}>
                 {event.type === "Birthday" ? "Birthday" : "Celebrating"}
@@ -233,7 +230,6 @@ export default function EventDetailsModal({
               ))}
             </View>
 
-            {/* Holiday Info from holidays.json */}
             {holidayInfo && (
               <>
                 <View style={styles.section}>

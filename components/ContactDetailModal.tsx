@@ -4,12 +4,12 @@ import Colors from "@/constants/Colors";
 import { Contact } from "@/hooks/useContacts";
 import React from "react";
 import {
-    Image,
-    Modal,
-    Platform,
-    ScrollView,
-    StyleSheet,
-    TouchableOpacity
+  Image,
+  Modal,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity
 } from "react-native";
 
 interface ContactDetailModalProps {
@@ -94,21 +94,24 @@ export default function ContactDetailModal({
     >
       <View style={[styles.container, { backgroundColor: colors.background }]}>
         <View style={styles.header}>
+          <View style={{ width: 50 }} />
+          <Text style={[styles.title, { color: colors.text }]}>
+            Contact Info
+          </Text>
           <TouchableOpacity onPress={onClose}>
             <Text style={[styles.closeButton, { color: colors.tint }]}>
               Done
             </Text>
           </TouchableOpacity>
-          <Text style={[styles.title, { color: colors.text }]}>
-            Contact Info
-          </Text>
-          <View style={{ width: 50 }} />
         </View>
 
         <ScrollView style={styles.content}>
           <View style={styles.profileSection}>
             {contact.photoUri ? (
-              <Image source={{ uri: contact.photoUri }} style={styles.photoAvatar} />
+              <Image
+                source={{ uri: contact.photoUri }}
+                style={styles.photoAvatar}
+              />
             ) : (
               <View style={[styles.avatar, { backgroundColor: colors.tint }]}>
                 <Text style={styles.avatarText}>
@@ -137,8 +140,8 @@ export default function ContactDetailModal({
                 {daysUntilBirthday === 0
                   ? "🎉 Birthday is today!"
                   : daysUntilBirthday === 1
-                  ? "🎂 Birthday is tomorrow!"
-                  : `🎈 ${daysUntilBirthday} days until birthday`}
+                  ? "Birthday is tomorrow!"
+                  : `${daysUntilBirthday} days until birthday`}
               </Text>
             </View>
 
@@ -148,11 +151,13 @@ export default function ContactDetailModal({
                   Holidays ({contact.holidays.length})
                 </Text>
                 {contact.holidays.map((holiday, index) => (
-                  <View 
-                    key={index} 
+                  <View
+                    key={index}
                     style={[
                       styles.holidayRow,
-                      index === contact.holidays.length - 1 && { borderBottomWidth: 0 }
+                      index === contact.holidays.length - 1 && {
+                        borderBottomWidth: 0
+                      }
                     ]}
                   >
                     <Text style={[styles.holidayName, { color: colors.text }]}>
