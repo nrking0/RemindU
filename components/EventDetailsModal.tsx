@@ -3,18 +3,20 @@ import { useColorScheme } from "@/components/useColorScheme";
 import Colors from "@/constants/Colors";
 import holidaysData from "@/constants/holidays.json";
 import { Contact } from "@/hooks/useContacts";
+// 1. Import the library
 import React, { useEffect, useState } from "react";
 import {
-    ActivityIndicator,
-    Alert,
-    Image,
-    InteractionManager,
-    Linking,
-    Modal,
-    ScrollView,
-    StyleSheet,
-    TouchableOpacity
+  ActivityIndicator,
+  Alert,
+  Image,
+  InteractionManager,
+  Linking,
+  Modal,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
 } from "react-native";
+import Markdown from "react-native-markdown-display";
 
 export interface EventItem {
   name: string;
@@ -45,7 +47,7 @@ export default function EventDetailsModal({
   visible,
   event,
   contacts,
-  onClose
+  onClose,
 }: EventDetailsModalProps) {
   const colorScheme = useColorScheme();
   const colors = Colors[colorScheme ?? "light"];
@@ -78,7 +80,11 @@ export default function EventDetailsModal({
           const celebrating = contacts.filter((contact) =>
             contact.holidays.some((h) => {
               const [holidayMonth, holidayDay] = h.date.split("/").map(Number);
-              return h.name === event.name && holidayMonth === month && holidayDay === day;
+              return (
+                h.name === event.name &&
+                holidayMonth === month &&
+                holidayDay === day
+              );
             })
           );
           setCelebratingContacts(celebrating);
@@ -105,26 +111,27 @@ export default function EventDetailsModal({
   const fetchGeminiExplanation = async (currentEvent: EventItem) => {
     const date = currentEvent.dateString || "the specific date";
     const name = currentEvent.name;
-    const userQuery = `Summarize the general wikipedia link for the holiday ${name} on the date ${date}. It should have its overview and meaning. And then focus on how locals celebrate it and how people out of the culture can celebrate it`;
+    // Updated prompt from second snippet to ensure better formatting
+    const userQuery = `Summarize the general wikipedia link for the holiday ${name} on the date ${date}. It should have its overview, meaning, and how locals celebrate it and how people out of the culture can celebrate it. Make sure that each paragraph is no more than 3 sentences.`;
 
-    const apiKey = "AIzaSyDS43f5vhWtlN6cs6_0aa2VRaVrefTqBLQ";
+    // NOTE: Ensure this key is valid. In production, protect this key.
+    const apiKey = "AIzaSyD1I-A3oAPXw3QucreOZKj5dbcT3diQY_Y";
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
     try {
-    //   const res = await fetch(apiUrl, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify({
-    //       contents: [{ parts: [{ text: userQuery }] }]
-    //     })
-    //   });
-      let res = {"ok": false}
+      const res = await fetch(apiUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: userQuery }] }],
+        }),
+      });
 
       if (!res.ok) throw new Error("API Error");
 
-    //   const result = await res.json();
-    //   const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
-    //   if (text) setAiSummary(text);
+      const result = await res.json();
+      const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (text) setAiSummary(text);
     } catch (e) {
       setError("Failed to load summary.");
     } finally {
@@ -136,7 +143,7 @@ export default function EventDetailsModal({
     try {
       const encodedMessage = encodeURIComponent(greetingText);
       const url = `sms:?body=${encodedMessage}`;
-      
+
       const canOpen = await Linking.canOpenURL(url);
       if (canOpen) {
         await Linking.openURL(url);
@@ -150,9 +157,9 @@ export default function EventDetailsModal({
 
   const generateCustomMessage = () => {
     if (!event || celebratingContacts.length === 0) return "";
-    
+
     const firstName = celebratingContacts[0].firstName;
-    
+
     if (event.type === "Birthday") {
       return `Happy Birthday, ${firstName}! 🎉 Wishing you a wonderful day filled with joy, laughter, and all your favorite things. Have an amazing year ahead!`;
     } else {
@@ -173,7 +180,7 @@ export default function EventDetailsModal({
         <View
           style={[
             styles.modalContainer,
-            { backgroundColor: colors.background, maxHeight: "80%" }
+            { backgroundColor: colors.background, maxHeight: "80%" },
           ]}
         >
           {/* Header */}
@@ -208,13 +215,14 @@ export default function EventDetailsModal({
                   style={[
                     styles.contactItem,
                     {
-                      backgroundColor: colors.background
-                    }
+                      backgroundColor: colors.background,
+                      borderColor: colors.text + "20",
+                    },
                   ]}
                 >
                   {contact.photoUri && (
-                    <Image 
-                      source={{ uri: contact.photoUri }} 
+                    <Image
+                      source={{ uri: contact.photoUri }}
                       style={styles.contactPhoto}
                     />
                   )}
@@ -250,9 +258,7 @@ export default function EventDetailsModal({
                   <Text style={[styles.sectionHeader, { color: colors.text }]}>
                     About
                   </Text>
-                  <Text
-                    style={[styles.infoText, { color: colors.text }]}
-                  >
+                  <Text style={[styles.infoText, { color: colors.text }]}>
                     {holidayInfo.summary}
                   </Text>
                 </View>
@@ -261,24 +267,29 @@ export default function EventDetailsModal({
                   <Text style={[styles.sectionHeader, { color: colors.text }]}>
                     Greeting
                   </Text>
-                  <Text
-                    style={[styles.greetingText, { color: colors.text }]}
-                  >
+                  <Text style={[styles.greetingText, { color: colors.text }]}>
                     {holidayInfo.greeting.replace(
                       "[contact name]",
                       celebratingContacts[0]?.firstName || "there"
                     )}
                   </Text>
                   <TouchableOpacity
-                    style={[styles.messageButton, { backgroundColor: colors.tint }]}
-                    onPress={() => openMessagingApp(
-                      holidayInfo.greeting.replace(
-                        "[contact name]",
-                        celebratingContacts[0]?.firstName || "there"
+                    style={[
+                      styles.messageButton,
+                      { backgroundColor: colors.tint },
+                    ]}
+                    onPress={() =>
+                      openMessagingApp(
+                        holidayInfo.greeting.replace(
+                          "[contact name]",
+                          celebratingContacts[0]?.firstName || "there"
+                        )
                       )
-                    )}
+                    }
                   >
-                    <Text style={styles.messageButtonText}>Send as Message</Text>
+                    <Text style={styles.messageButtonText}>
+                      Send as Message
+                    </Text>
                   </TouchableOpacity>
                 </View>
               </>
@@ -289,13 +300,14 @@ export default function EventDetailsModal({
                 <Text style={[styles.sectionHeader, { color: colors.text }]}>
                   Send a Message
                 </Text>
-                <Text
-                  style={[styles.greetingText, { color: colors.text }]}
-                >
+                <Text style={[styles.greetingText, { color: colors.text }]}>
                   {generateCustomMessage()}
                 </Text>
                 <TouchableOpacity
-                  style={[styles.messageButton, { backgroundColor: colors.tint }]}
+                  style={[
+                    styles.messageButton,
+                    { backgroundColor: colors.tint },
+                  ]}
                   onPress={() => openMessagingApp(generateCustomMessage())}
                 >
                   <Text style={styles.messageButtonText}>Send as Message</Text>
@@ -303,16 +315,16 @@ export default function EventDetailsModal({
               </View>
             )}
 
-            {/* AI Summary Section */}
+            {/* AI Summary Section with Markdown */}
             {event.type === "Holiday" && (
               <View style={styles.section}>
                 <Text style={[styles.sectionHeader, { color: colors.text }]}>
-                  AI Summary
+                  Suggestion from AI
                 </Text>
                 <View
                   style={[
                     styles.aiContainer,
-                    { backgroundColor: colors.text + "10" }
+                    { backgroundColor: colors.text + "10" },
                   ]}
                 >
                   {loading ? (
@@ -327,13 +339,27 @@ export default function EventDetailsModal({
                   ) : error ? (
                     <Text style={{ color: "red" }}>{error}</Text>
                   ) : aiSummary ? (
-                    <Text style={[styles.aiText, { color: colors.text }]}>
+                    /* 2. Markdown Component Applied Here */
+                    <Markdown
+                      style={{
+                        body: {
+                          color: colors.text,
+                          fontSize: 14,
+                          lineHeight: 22,
+                        },
+                        link: {
+                          color: colors.tint,
+                        },
+                      }}
+                    >
                       {aiSummary}
-                    </Text>
+                    </Markdown>
                   ) : null}
                 </View>
               </View>
             )}
+            {/* Added padding at bottom to ensure content isn't cut off */}
+            <View style={{ height: 40 }} />
           </ScrollView>
         </View>
       </View>
@@ -345,7 +371,7 @@ const styles = StyleSheet.create({
   overlay: {
     flex: 1,
     backgroundColor: "rgba(0, 0, 0, 0.4)",
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
   },
   modalContainer: {
     height: "80%",
@@ -355,7 +381,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: -2 },
     shadowOpacity: 0.25,
     shadowRadius: 4,
-    elevation: 5
+    elevation: 5,
   },
   header: {
     flexDirection: "row",
@@ -365,33 +391,33 @@ const styles = StyleSheet.create({
     paddingTop: 16,
     paddingBottom: 12,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(150, 150, 150, 0.2)"
+    borderBottomColor: "rgba(150, 150, 150, 0.2)",
   },
   closeButton: {
     fontSize: 17,
-    fontWeight: "600"
+    fontWeight: "600",
   },
   titleContainer: {
     paddingHorizontal: 24,
     paddingTop: 16,
-    paddingBottom: 8
+    paddingBottom: 8,
   },
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    textAlign: "left"
+    textAlign: "left",
   },
   scrollContent: {
     flex: 1,
-    paddingHorizontal: 24
+    paddingHorizontal: 24,
   },
   section: {
-    marginBottom: 24
+    marginBottom: 24,
   },
   sectionHeader: {
     fontSize: 18,
     fontWeight: "700",
-    marginBottom: 10
+    marginBottom: 10,
   },
   contactItem: {
     flexDirection: "row",
@@ -400,57 +426,58 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     marginBottom: 8,
     borderRadius: 8,
-    borderWidth: 1
+    borderWidth: 1,
   },
   contactPhoto: {
     width: 40,
     height: 40,
     borderRadius: 20,
-    marginRight: 12
+    marginRight: 12,
   },
   contactName: {
     fontSize: 16,
-    fontWeight: "600"
+    fontWeight: "600",
   },
   infoText: {
     fontSize: 15,
-    lineHeight: 22
+    lineHeight: 22,
   },
   greetingText: {
     fontSize: 15,
     lineHeight: 22,
-    fontStyle: "italic"
+    fontStyle: "italic",
   },
   messageButton: {
     marginTop: 12,
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
-    alignItems: "center"
+    alignItems: "center",
   },
   messageButtonText: {
     color: "#fff",
     fontSize: 15,
-    fontWeight: "600"
+    fontWeight: "600",
   },
   aiContainer: {
     width: "100%",
     minHeight: 50,
     padding: 12,
-    borderRadius: 8
+    borderRadius: 8,
   },
+  // Kept for reference, but Markdown overrides these via style props
   aiText: {
     fontSize: 14,
-    lineHeight: 22
+    lineHeight: 22,
   },
   loadingContainer: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    padding: 10
+    padding: 10,
   },
   loadingText: {
     marginLeft: 10,
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 });
