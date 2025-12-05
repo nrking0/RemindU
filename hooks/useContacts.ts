@@ -1,16 +1,18 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 type holiday = {
     name: string;
     date: string;
 }
+
 export type Contact = {
     id: string;
     firstName: string;
     lastName: string;
     birthday: Date; 
     holidays: holiday[];
+    photoUri?: string;
 }
 
 export const useContacts = () => {
@@ -33,14 +35,14 @@ export const useContacts = () => {
         }
     };
     
-    const refreshContacts = async () => {
+    const refreshContacts = useCallback(async () => {
         const loadedContacts = await loadContacts();
         setContacts(loadedContacts);
-    };
-    
+    }, []); // Empty dependency array if loadContacts is stable/imported
+
     useEffect(() => {
         refreshContacts();
-    }, [contacts]);
+    }, [refreshContacts]); // This is now safe because refreshContacts is stable
 
     const addContact = async (newContact: Contact) => {
         try {

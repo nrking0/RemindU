@@ -1,12 +1,15 @@
+import AddCustomHolidayModal from "@/components/AddCustomHolidayModal";
+import EventDetailsModal, { EventItem } from "@/components/EventDetailsModal";
 import { Text, View } from "@/components/Themed";
+import UpcomingHolidaysModal from "@/components/UpcomingHolidaysModal";
 import { useColorScheme } from "@/components/useColorScheme";
 import Colors from "@/constants/Colors";
+import { useFriendsContext } from "@/contexts/FriendsContext";
 import { useContacts } from "@/hooks/useContacts";
 import { useFocusEffect } from "@react-navigation/native";
 import { useCallback, useState } from "react";
 import { ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import { Calendar } from "react-native-calendars";
-import EventDetailsModal, { EventItem } from "../eventdetail";
 
 export default function TabOneScreen() {
   const now = new Date();
@@ -20,6 +23,7 @@ export default function TabOneScreen() {
   const colorScheme = useColorScheme();
   const colors = Colors[colorScheme ?? "light"];
   const { contacts, refreshContacts } = useContacts();
+  const { isAddHolidayModalVisible, setIsAddHolidayModalVisible, isUpcomingHolidaysModalVisible, setIsUpcomingHolidaysModalVisible } = useFriendsContext();
 
   const [modalVisible, setModalVisible] = useState(false); // <--- NEW
   const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null); // <--- NEW
@@ -62,7 +66,9 @@ export default function TabOneScreen() {
         })
         .map((holiday) => ({
           name: holiday.name,
-          contactName: `${contact.firstName} ${contact.lastName}`
+          contactName: `${contact.firstName} ${contact.lastName}`,
+          type: "Holiday" as const,
+          dateString: selectedDate
         }))
     );
 
@@ -76,7 +82,9 @@ export default function TabOneScreen() {
       })
       .map((contact) => ({
         name: "Birthday",
-        contactName: `${contact.firstName} ${contact.lastName}`
+        contactName: `${contact.firstName} ${contact.lastName}`,
+        type: "Birthday" as const,
+        dateString: selectedDate
       }));
 
     return [...holidaysOnDate, ...birthdaysOnDate];
@@ -252,8 +260,26 @@ export default function TabOneScreen() {
         <EventDetailsModal 
               visible={modalVisible}
               event={selectedEvent}
+              contacts={contacts}
               onClose={() => setModalVisible(false)}
           />
+        <AddCustomHolidayModal
+          visible={isAddHolidayModalVisible}
+          onClose={() => {
+            setIsAddHolidayModalVisible(false);
+            refreshContacts();
+          }}
+        />
+        <UpcomingHolidaysModal
+          visible={isUpcomingHolidaysModalVisible}
+          contacts={contacts}
+          onClose={() => setIsUpcomingHolidaysModalVisible(false)}
+          onSelectEvent={(event) => {
+            setSelectedEvent(event);
+            setIsUpcomingHolidaysModalVisible(false);
+            setModalVisible(true);
+          }}
+        />
       </View>
     </View>
   );

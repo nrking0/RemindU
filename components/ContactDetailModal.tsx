@@ -4,6 +4,7 @@ import Colors from "@/constants/Colors";
 import { Contact } from "@/hooks/useContacts";
 import React from "react";
 import {
+  Image,
   Modal,
   Platform,
   ScrollView,
@@ -93,25 +94,32 @@ export default function ContactDetailModal({
     >
       <View style={[styles.container, { backgroundColor: colors.background }]}>
         <View style={styles.header}>
+          <View style={{ width: 50 }} />
+          <Text style={[styles.title, { color: colors.text }]}>
+            Contact Info
+          </Text>
           <TouchableOpacity onPress={onClose}>
             <Text style={[styles.closeButton, { color: colors.tint }]}>
               Done
             </Text>
           </TouchableOpacity>
-          <Text style={[styles.title, { color: colors.text }]}>
-            Contact Info
-          </Text>
-          <View style={{ width: 50 }} />
         </View>
 
         <ScrollView style={styles.content}>
           <View style={styles.profileSection}>
-            <View style={[styles.avatar, { backgroundColor: colors.tint }]}>
-              <Text style={styles.avatarText}>
-                {contact.firstName[0]}
-                {contact.lastName[0]}
-              </Text>
-            </View>
+            {contact.photoUri ? (
+              <Image
+                source={{ uri: contact.photoUri }}
+                style={styles.photoAvatar}
+              />
+            ) : (
+              <View style={[styles.avatar, { backgroundColor: colors.tint }]}>
+                <Text style={styles.avatarText}>
+                  {contact.firstName[0]}
+                  {contact.lastName[0]}
+                </Text>
+              </View>
+            )}
             <Text style={[styles.name, { color: colors.text }]}>
               {contact.firstName} {contact.lastName}
             </Text>
@@ -132,18 +140,26 @@ export default function ContactDetailModal({
                 {daysUntilBirthday === 0
                   ? "🎉 Birthday is today!"
                   : daysUntilBirthday === 1
-                  ? "🎂 Birthday is tomorrow!"
-                  : `🎈 ${daysUntilBirthday} days until birthday`}
+                  ? "Birthday is tomorrow!"
+                  : `${daysUntilBirthday} days until birthday`}
               </Text>
             </View>
 
             {contact.holidays && contact.holidays.length > 0 && (
               <View style={styles.infoCard}>
                 <Text style={[styles.sectionTitle, { color: colors.text }]}>
-                  Custom Holidays ({contact.holidays.length})
+                  Holidays ({contact.holidays.length})
                 </Text>
                 {contact.holidays.map((holiday, index) => (
-                  <View key={index} style={styles.holidayRow}>
+                  <View
+                    key={index}
+                    style={[
+                      styles.holidayRow,
+                      index === contact.holidays.length - 1 && {
+                        borderBottomWidth: 0
+                      }
+                    ]}
+                  >
                     <Text style={[styles.holidayName, { color: colors.text }]}>
                       {holiday.name}
                     </Text>
@@ -213,6 +229,12 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: 15
+  },
+  photoAvatar: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
     marginBottom: 15
   },
   avatarText: {
