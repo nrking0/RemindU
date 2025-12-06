@@ -1,6 +1,8 @@
+import AddFriendModal from "@/components/AddFriendModal";
 import { Text, View } from "@/components/Themed";
 import { useColorScheme } from "@/components/useColorScheme";
 import Colors from "@/constants/Colors";
+import { useFriendsContext } from "@/contexts/FriendsContext";
 import { Contact } from "@/hooks/useContacts";
 import React from "react";
 import {
@@ -15,6 +17,7 @@ import {
 interface ContactDetailModalProps {
   visible: boolean;
   contact: Contact | null;
+  editContact: (newContact: Contact) => Promise<void>;
   deleteContact: (id: string) => Promise<void>;
   onClose: () => void;
 }
@@ -22,9 +25,11 @@ interface ContactDetailModalProps {
 export default function ContactDetailModal({
   visible,
   contact,
+  editContact,
   deleteContact,
   onClose
 }: ContactDetailModalProps) {
+  const { isAddModalVisible, setIsAddModalVisible } = useFriendsContext();
   const colorScheme = useColorScheme();
   const colors = Colors[colorScheme ?? "light"];
 
@@ -178,6 +183,16 @@ export default function ContactDetailModal({
           </View>
           <TouchableOpacity>
             <Text
+              style={[styles.editButton, { color: colors.tint }]}
+              onPress={async () => {
+                setIsAddModalVisible(true)
+              }}
+            >
+              Edit Contact
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text
               style={[styles.deleteButton]}
               onPress={async () => {
                 await deleteContact(contact.id);
@@ -189,6 +204,13 @@ export default function ContactDetailModal({
           </TouchableOpacity>
         </ScrollView>
       </View>
+      <AddFriendModal
+        visible={isAddModalVisible}
+        mode={"edit"}
+        onClose={() => setIsAddModalVisible(false)}
+        contact={contact}
+        onSubmit={editContact}
+      />
     </Modal>
   );
 }
@@ -291,6 +313,12 @@ const styles = StyleSheet.create({
   },
   holidayDate: {
     fontSize: 14
+  },
+  editButton: {
+    fontSize: 16,
+    fontWeight: "600",
+    textAlign: "center",
+    paddingVertical: 15
   },
   deleteButton: {
     color: "red",

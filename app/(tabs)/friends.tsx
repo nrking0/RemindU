@@ -15,7 +15,7 @@ import {
 } from "react-native";
 
 export default function TabTwoScreen() {
-  const { contacts, addContact, removeContact } = useContacts();
+  const { contacts, addContact, editContact, removeContact } = useContacts();
   const { isAddModalVisible, setIsAddModalVisible } = useFriendsContext();
   const [isDetailModalVisible, setIsDetailModalVisible] = useState(false);
   const [selectedContact, setSelectedContact] = useState<Contact | null>(null);
@@ -27,10 +27,6 @@ export default function TabTwoScreen() {
   const handleContactPress = (contact: Contact) => {
     setSelectedContact(contact);
     setIsDetailModalVisible(true);
-  };
-
-  const handleAddContact = async (newContact: Contact) => {
-    await addContact(newContact);
   };
 
   const onRefresh = React.useCallback(() => {
@@ -171,13 +167,15 @@ export default function TabTwoScreen() {
 
       <AddFriendModal
         visible={isAddModalVisible}
+        mode={"add"}
         onClose={() => setIsAddModalVisible(false)}
-        onAddContact={handleAddContact}
+        onSubmit={addContact}
       />
 
       <ContactDetailModal
         visible={isDetailModalVisible}
         contact={selectedContact}
+        editContact={editContact}
         deleteContact={removeContact}
         onClose={() => setIsDetailModalVisible(false)}
       />

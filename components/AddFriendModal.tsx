@@ -4,7 +4,7 @@ import Colors from "@/constants/Colors";
 import { Contact } from "@/hooks/useContacts";
 import DateTimePicker from "@react-native-community/datetimepicker";
 import * as ImagePicker from "expo-image-picker";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Alert,
   Image,
@@ -20,15 +20,20 @@ import HolidaySelector from "./HolidaySelector";
 
 interface AddFriendModalProps {
   visible: boolean;
+  mode: "add" | "edit";
+  contact?: Contact;
+  onSubmit: (contact: Contact) => void;
   onClose: () => void;
-  onAddContact: (contact: Contact) => void;
 }
 
 export default function AddFriendModal({
   visible,
-  onClose,
-  onAddContact
+  mode,
+  contact,
+  onSubmit,
+  onClose
 }: AddFriendModalProps) {
+  const [title, setTitle] = useState("Add Friend");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [birthday, setBirthday] = useState("");
@@ -47,6 +52,29 @@ export default function AddFriendModal({
   const colorScheme = useColorScheme();
   const colors = Colors[colorScheme ?? "light"];
 
+  useEffect(() => {
+    if (!visible) return;
+
+    if (mode === "edit" && contact) {
+      setTitle("Edit Friend");
+      setFirstName(contact.firstName);
+      setLastName(contact.lastName);
+      setPhotoUri(contact.photoUri ?? null);
+      setHolidays(contact.holidays ?? []);
+
+      const date = new Date(contact.birthday);
+      setBirthday(
+        `${(date.getMonth() + 1).toString().padStart(2, "0")}/${date
+          .getDate()
+          .toString()
+          .padStart(2, "0")}/${date.getFullYear()}`
+      );
+      setBirthdayDate(date);
+    } else {
+      resetForm();
+    }
+  }, [visible, mode, contact]);
+  
   const addHoliday = () => {
     if (newHolidayName.trim() && newHolidayDate.trim()) {
       setHolidays([
@@ -93,7 +121,6 @@ export default function AddFriendModal({
       )}`;
     }
   };
-
 
   const validateDate = (dateString: string) => {
     if (dateString.length !== 10) return false;
@@ -170,16 +197,26 @@ export default function AddFriendModal({
       }
     }
 
-    const newContact: Contact = {
-      firstName: firstName.trim(),
-      lastName: lastName.trim(),
-      birthday: finalBirthdayDate,
-      holidays: holidays,
-      id: Math.random().toString(36),
-      photoUri: photoUri || undefined
-    };
+    const newContact: Contact =
+      mode === "add"
+        ? {
+            id: Math.random().toString(36),
+            firstName: firstName.trim(),
+            lastName: lastName.trim(),
+            birthday: finalBirthdayDate,
+            holidays: holidays,
+            photoUri: photoUri || undefined
+          }
+        : {
+            ...contact!,
+            firstName: firstName.trim(),
+            lastName: lastName.trim(),
+            birthday: finalBirthdayDate,
+            holidays: holidays,
+            photoUri: photoUri || undefined
+          };
 
-    onAddContact(newContact);
+    onSubmit(newContact);
     resetForm();
     onClose();
   };
@@ -233,7 +270,7 @@ export default function AddFriendModal({
               </Text>
             </TouchableOpacity>
             <Text style={[styles.title, { color: colors.text }]}>
-              Add Friend
+              {title}
             </Text>
             <TouchableOpacity onPress={handleSubmit}>
               <Text style={[styles.saveButton, { color: colors.tint }]}>

@@ -54,6 +54,16 @@ export const useContacts = () => {
         }
     };
 
+    const editContact = async (newContact: Contact) => {
+        try {
+            const updatedContacts = contacts.map(c => (c.id === newContact.id ? newContact : c));
+            setContacts(updatedContacts);
+            await AsyncStorage.setItem("@contacts", JSON.stringify(updatedContacts));
+        } catch (error) {
+            console.error('Failed to update contact:', error)
+        }
+    }
+
     const removeContact = async (id: string) => {
         try {
             const updatedContacts = contacts.filter(contact => contact.id !== id);
@@ -64,5 +74,5 @@ export const useContacts = () => {
         }
     };
 
-    return { contacts, addContact, removeContact, refreshContacts };
+    return { contacts, addContact, editContact, removeContact, refreshContacts };
 }
